@@ -1,0 +1,402 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Ongoing Roundtables | Semicircle</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .arc-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .arc-card::after {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 120px;
+            height: 120px;
+            background: currentColor;
+            opacity: 0.03;
+            border-radius: 50%;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#002113",
+                        "on-secondary-container": "#57657b",
+                        "on-primary-fixed": "#002117",
+                        "tertiary-fixed": "#6ffbbe",
+                        "surface-tint": "#2b6954",
+                        "surface-bright": "#f7f9fb",
+                        "outline-variant": "#bfc9c3",
+                        "inverse-primary": "#95d3ba",
+                        "on-surface": "#191c1e",
+                        "primary-container": "#064e3b",
+                        "surface-container-high": "#e6e8ea",
+                        "tertiary-container": "#004f34",
+                        "surface-variant": "#e0e3e5",
+                        "secondary-container": "#d5e3fd",
+                        "secondary-fixed-dim": "#b9c7e0",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f2f4f6",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#80bea6",
+                        "background": "#f7f9fb",
+                        "surface-dim": "#d8dadc",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#b0f0d6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#3a485c",
+                        "inverse-on-surface": "#eff1f3",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#0d1c2f",
+                        "on-primary-fixed-variant": "#0b513d",
+                        "primary": "#003527",
+                        "primary-fixed-dim": "#95d3ba",
+                        "on-background": "#191c1e",
+                        "secondary-fixed": "#d5e3fd",
+                        "outline": "#707974",
+                        "inverse-surface": "#2d3133",
+                        "surface-container": "#eceef0",
+                        "secondary": "#515f74",
+                        "error": "#ba1a1a",
+                        "surface": "#f7f9fb",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-surface-variant": "#404944",
+                        "on-tertiary-container": "#31c98f",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "tertiary": "#003623"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-page": "64px",
+                        "gutter": "32px",
+                        "container-max": "1280px",
+                        "unit": "8px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "display-xl": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "display-xl": ["60px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopAppBar Component -->
+<header class="bg-white/90 dark:bg-slate-950/90 backdrop-blur-md text-emerald-900 dark:text-emerald-400 fixed top-0 w-full z-50 border-b border-slate-200 dark:border-slate-800 shadow-[0_4px_20px_-5px_rgba(6,78,59,0.1)] flex justify-between items-center px-12 h-20 w-full">
+<div class="text-2xl font-bold tracking-tighter text-emerald-950 dark:text-emerald-50">Semicircle</div>
+<nav class="hidden md:flex items-center gap-12">
+<a class="font-manrope tracking-tight text-sm uppercase font-semibold text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700 pb-1" href="#">Roundtables</a>
+<a class="font-manrope tracking-tight text-sm uppercase font-semibold text-slate-500 dark:text-slate-400 hover:text-emerald-800 transition-colors" href="#">Proposals</a>
+<a class="font-manrope tracking-tight text-sm uppercase font-semibold text-slate-500 dark:text-slate-400 hover:text-emerald-800 transition-colors" href="#">Insights</a>
+<a class="font-manrope tracking-tight text-sm uppercase font-semibold text-slate-500 dark:text-slate-400 hover:text-emerald-800 transition-colors" href="#">Network</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-on-surface-variant hover:opacity-80 transition-all duration-300">search</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 font-label-caps text-label-caps rounded-l-none rounded-r-full hover:opacity-80 transition-all duration-300 active:scale-95">Request Invitation</button>
+<div class="h-10 w-10 rounded-full border border-outline-variant overflow-hidden">
+<img alt="Executive Profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a professional male executive with a focused expression, high-end studio lighting with subtle gray background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL9MZEB-nss5Hvt-ytYWAvxMRNcBlsGJU376teONE5XqJ8UtMQBz7fFJrPaQ8pRbjLXtVad1N8bvMwxHYgOi7ajRF_ov_UmFNrwOHIQD7mR-4CgH1yX0t8HbjhsB6KywKG77hwgJEhh3aYiJAHt-A_7O9EbOZHs1npPpkT_vtpuXsKbROeso2gmy_nw3wQOQN8BGYIB9PvhJ_vtx5f2zl7Rck84N3PppwoV_7S6hEkFBxYHCzTpjSRY9glZaJzPLPS4oR4qzWIpywt">
+</div>
+</div>
+</header>
+<div class="flex min-h-screen">
+<!-- SideNavBar Component -->
+<aside class="bg-slate-50 dark:bg-slate-900 text-emerald-800 dark:text-emerald-400 h-screen w-64 border-r border-slate-200 dark:border-slate-800 fixed left-0 top-0 pt-24 pb-8 flex flex-col justify-between rounded-r-[40px] z-40">
+<div>
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg">corporate_fare</span>
+</div>
+<div>
+<p class="font-manrope text-sm font-bold text-emerald-950 dark:text-emerald-50">Executive Suite</p>
+<p class="text-[10px] uppercase tracking-widest text-slate-400">Semicircle Platform</p>
+</div>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-4 px-6 py-3 font-manrope text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-r-full hover:pl-2 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">splitscreen</span>
+                        Directory
+                    </a>
+<a class="flex items-center gap-4 px-6 py-3 font-manrope text-sm text-emerald-900 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-900/20 rounded-l-none rounded-r-full font-bold border-l-4 border-emerald-800 hover:pl-2 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">description</span>
+                        Active Proposals
+                    </a>
+<a class="flex items-center gap-4 px-6 py-3 font-manrope text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-r-full hover:pl-2 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">group</span>
+                        My Circles
+                    </a>
+<a class="flex items-center gap-4 px-6 py-3 font-manrope text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-r-full hover:pl-2 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">lock</span>
+                        Private Vault
+                    </a>
+</nav>
+<div class="px-6 mt-12">
+<button class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 py-3 rounded-xl font-label-caps text-label-caps text-emerald-900 shadow-sm active:scale-95 transition-transform">
+                        Start New Proposal
+                    </button>
+</div>
+</div>
+<div class="space-y-1">
+<a class="flex items-center gap-4 px-6 py-2 font-manrope text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-r-full transition-all" href="#">
+<span class="material-symbols-outlined">settings</span>
+                    Settings
+                </a>
+<a class="flex items-center gap-4 px-6 py-2 font-manrope text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-r-full transition-all" href="#">
+<span class="material-symbols-outlined text-sm">help_outline</span>
+                    Support
+                </a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 ml-64 pt-20 px-12">
+<!-- Hero Header -->
+<section class="max-w-7xl mx-auto mt-20 mb-16">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-slate-100 pb-12">
+<div class="max-w-2xl">
+<span class="inline-block bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase mb-6">Directory</span>
+<h1 class="font-headline-lg text-headline-lg text-primary mb-4">Ongoing Roundtables</h1>
+<p class="font-body-lg text-body-lg text-secondary leading-relaxed">Join high-level discourse and contribute your perspective to active initiatives.</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative">
+<input class="bg-surface-container border-none rounded-full px-6 py-3 pr-12 w-80 text-sm focus:ring-2 focus:ring-primary-container transition-all" placeholder="Search roundtables..." type="text">
+<span class="material-symbols-outlined absolute right-4 top-3 text-outline">search</span>
+</div>
+<button class="bg-white border border-outline-variant p-3 rounded-full hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+</div>
+</section>
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 pb-20">
+<!-- Directory Grid -->
+<div class="flex-1">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Card 1 -->
+<div class="arc-card bg-white border border-slate-100 p-8 rounded-[40px] shadow-sm hover:shadow-[0_10px_30px_-10px_rgba(6,78,59,0.12)] transition-all duration-500 group border-l-4 border-l-emerald-600">
+<div class="flex justify-between items-start mb-6">
+<span class="bg-emerald-50 text-emerald-800 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Accepting Members</span>
+<span class="text-slate-400 font-label-caps text-[11px] uppercase tracking-tighter">REF: RT-829</span>
+</div>
+<h3 class="font-headline-md text-[24px] leading-tight text-primary mb-3 group-hover:text-emerald-800 transition-colors">Decentralized Finance Policy Architecture for 2025</h3>
+<div class="flex items-center gap-3 mb-8">
+<div class="w-8 h-8 rounded-full bg-slate-200 overflow-hidden">
+<img alt="Sarah J. Woods" class="w-full h-full object-cover" data-alt="Portrait of a sophisticated professional woman in a white blazer, minimalist grey background, editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuColSu2V2Io7WHX_3CCZfcp2kYCeI6_nc7TqYnEeXd_5fpocjTTo4SloUjtMR3KObk9MUyb14gYShxJLF7UfFHlAaVDuHTCXqBOdFE_elV_cRY5r4LVTSRUelzWx-LBP414sXuENzHFqO1JISOZIrtCpWUpUvl9KFHox4upqW9gf4uhD8NP3P_EZXFRqlaXQLtxeD1UFbVOwUzbt7cOcSU2wt2kA5QA4MvxUgcH32wOfpWGIawf6BHYdOcqKMpbemXQMC5ZwjvQalYs">
+</div>
+<div>
+<p class="text-xs font-bold text-slate-800">Sarah J. Woods</p>
+<p class="text-[10px] text-slate-500 uppercase">Policy Lead, Fintech Guild</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-8 border-t border-slate-50 pt-6">
+<div>
+<p class="text-[10px] text-slate-400 uppercase tracking-widest mb-1">Participants</p>
+<p class="font-bold text-emerald-900">12 / 15</p>
+</div>
+<div>
+<p class="text-[10px] text-slate-400 uppercase tracking-widest mb-1">Time Remaining</p>
+<p class="font-bold text-emerald-900">2 weeks remaining</p>
+</div>
+</div>
+<button class="w-full bg-primary-container text-white py-4 rounded-l-none rounded-r-full font-label-caps text-sm tracking-widest hover:bg-primary transition-colors active:scale-[0.98]">
+                                REQUEST TO JOIN
+                            </button>
+</div>
+<!-- Card 2 -->
+<div class="arc-card bg-white border border-slate-100 p-8 rounded-[40px] shadow-sm hover:shadow-[0_10px_30px_-10px_rgba(6,78,59,0.12)] transition-all duration-500 group border-l-4 border-l-slate-300">
+<div class="flex justify-between items-start mb-6">
+<span class="bg-slate-100 text-slate-600 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">In Progress</span>
+<span class="text-slate-400 font-label-caps text-[11px] uppercase tracking-tighter">REF: RT-441</span>
+</div>
+<h3 class="font-headline-md text-[24px] leading-tight text-primary mb-3 group-hover:text-emerald-800 transition-colors">Cross-Border ESG Standardization Framework</h3>
+<div class="flex items-center gap-3 mb-8">
+<div class="w-8 h-8 rounded-full bg-slate-200 overflow-hidden">
+<img alt="Marcus Chen" class="w-full h-full object-cover" data-alt="Close-up of a distinguished older male executive in a navy blue suit, serious expression, high-contrast black and white photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrQIOG3DF4uiP9ro1XwYJBsH-9X9heOOED7homcKamdER0o4iBP3AqB52MccbsPgewBO8qwyprYh34vKvTZhj6HuysNbRke1lQqCP6caVfDLW-667IxFi7E_F2U2LdlzZ7vKoitSOxlLY08t2DyKV_7lrdbQLpagtdct22jSFPFfes7xOMtoF7SA8SqXblAFKT8dSlhIFtN68XxTbVuWf9pVltOWgdTR8acT-TSF9FmtadYcFLBv8Jx9OnZdP_sXN1EcaaCYYywNrW">
+</div>
+<div>
+<p class="text-xs font-bold text-slate-800">Marcus Chen</p>
+<p class="text-[10px] text-slate-500 uppercase">Managing Director, Green Ventures</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-8 border-t border-slate-50 pt-6">
+<div>
+<p class="text-[10px] text-slate-400 uppercase tracking-widest mb-1">Participants</p>
+<p class="font-bold text-emerald-900">8 / 10</p>
+</div>
+<div>
+<p class="text-[10px] text-slate-400 uppercase tracking-widest mb-1">Time Remaining</p>
+<p class="font-bold text-emerald-900">5 days remaining</p>
+</div>
+</div>
+<button class="w-full bg-white border border-primary-container text-primary-container py-4 rounded-l-none rounded-r-full font-label-caps text-sm tracking-widest hover:bg-emerald-50 transition-colors active:scale-[0.98]">
+                                VIEW SUMMARY
+                            </button>
+</div>
+<!-- Card 3 -->
+<div class="arc-card bg-white border border-slate-100 p-8 rounded-[40px] shadow-sm hover:shadow-[0_10px_30px_-10px_rgba(6,78,59,0.12)] transition-all duration-500 group border-l-4 border-l-emerald-600">
+<div class="flex justify-between items-start mb-6">
+<span class="bg-emerald-50 text-emerald-800 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Accepting Members</span>
+<span class="text-slate-400 font-label-caps text-[11px] uppercase tracking-tighter">REF: RT-102</span>
+</div>
+<h3 class="font-headline-md text-[24px] leading-tight text-primary mb-3 group-hover:text-emerald-800 transition-colors">Post-Quantum Cryptography in Banking</h3>
+<div class="flex items-center gap-3 mb-8">
+<div class="w-8 h-8 rounded-full bg-slate-200 overflow-hidden">
+<img alt="Elena Rodriguez" class="w-full h-full object-cover" data-alt="Mid-shot of a confident professional woman with glasses, smiling slightly, blurred office background with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCglZPTv571j7O7HMsL7z2kpfBUjRL7IUBID4Ij0GYihxXibHPcROXzMs14QDeJ-BAxVURTcO7LcMeJjRYMGq8cQsw53gO8O2pR2JbQF_BfgvQyU3006-RN2A6N9tGScswLn1_yLOTV6e5q-qtMEIKmOKIcceWfAhUE36KBRx71BpdbItR4y8FNPRvb4r31CzguqWJi-r5VIMcXVLfitc7ixG_nmxNkBkqAo78LkiOH70UAk2IyJoKI3HqroNlC3PDG_HieZX-ba9Po">
+</div>
+<div>
+<p class="text-xs font-bold text-slate-800">Elena Rodriguez</p>
+<p class="text-[10px] text-slate-500 uppercase">CTO, CyberShield</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-8 border-t border-slate-50 pt-6">
+<div>
+<p class="text-[10px] text-slate-400 uppercase tracking-widest mb-1">Participants</p>
+<p class="font-bold text-emerald-900">4 / 8</p>
+</div>
+<div>
+<p class="text-[10px] text-slate-400 uppercase tracking-widest mb-1">Time Remaining</p>
+<p class="font-bold text-emerald-900">3 weeks remaining</p>
+</div>
+</div>
+<button class="w-full bg-primary-container text-white py-4 rounded-l-none rounded-r-full font-label-caps text-sm tracking-widest hover:bg-primary transition-colors active:scale-[0.98]">
+                                REQUEST TO JOIN
+                            </button>
+</div>
+<!-- Card 4 -->
+<div class="arc-card bg-white border border-slate-100 p-8 rounded-[40px] shadow-sm hover:shadow-[0_10px_30px_-10px_rgba(6,78,59,0.12)] transition-all duration-500 group border-l-4 border-l-emerald-600">
+<div class="flex justify-between items-start mb-6">
+<span class="bg-emerald-50 text-emerald-800 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Accepting Members</span>
+<span class="text-slate-400 font-label-caps text-[11px] uppercase tracking-tighter">REF: RT-559</span>
+</div>
+<h3 class="font-headline-md text-[24px] leading-tight text-primary mb-3 group-hover:text-emerald-800 transition-colors">AI Ethics: Implementation for Board of Directors</h3>
+<div class="flex items-center gap-3 mb-8">
+<div class="w-8 h-8 rounded-full bg-slate-200 overflow-hidden">
+<img alt="Jonathan Hale" class="w-full h-full object-cover" data-alt="Portrait of a young creative professional with short hair, neutral expression, natural window lighting, studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDywsMRvG0_PYt2RMdHXvEwZP2F9V22q-UkDOyNFN4yWpuML-Ped8WvKfoAHQhjwlVojaTscNxwdqcczf29pMlW8ad3MdLoinHtV2QHmMMN5KrhjNXGcQoQpK_ZpJxnoPtWRWc2Hc1c4tgcQXelfj2SioWqiFmvtGv3GpOx5Rikm9aUy31jQc88cSRW9Wu07j39DOcMaDIykCUHtvdJqps6_QsBhxZ4QnnMTH-qoL2rMN4ABvo8zmeb6ytJ9zdwgA7tRIFTDgLQiX1C">
+</div>
+<div>
+<p class="text-xs font-bold text-slate-800">Jonathan Hale</p>
+<p class="text-[10px] text-slate-500 uppercase">Board Member, Future Corp</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-8 border-t border-slate-50 pt-6">
+<div>
+<p class="text-[10px] text-slate-400 uppercase tracking-widest mb-1">Participants</p>
+<p class="font-bold text-emerald-900">18 / 20</p>
+</div>
+<div>
+<p class="text-[10px] text-slate-400 uppercase tracking-widest mb-1">Time Remaining</p>
+<p class="font-bold text-emerald-900">1 week remaining</p>
+</div>
+</div>
+<button class="w-full bg-primary-container text-white py-4 rounded-l-none rounded-r-full font-label-caps text-sm tracking-widest hover:bg-primary transition-colors active:scale-[0.98]">
+                                REQUEST TO JOIN
+                            </button>
+</div>
+</div>
+</div>
+<!-- Right Sidebar: My Active Roundtables -->
+<aside class="w-full lg:w-80 space-y-8">
+<div class="bg-slate-900 text-white p-8 rounded-[40px] shadow-2xl relative overflow-hidden">
+<div class="relative z-10">
+<h4 class="font-manrope text-xs font-bold uppercase tracking-widest text-emerald-400 mb-6">My Active Roundtables</h4>
+<div class="space-y-6">
+<div class="border-b border-white/10 pb-4">
+<p class="text-xs text-slate-400 mb-1">In Session</p>
+<h5 class="text-sm font-semibold text-white group-hover:text-emerald-300 cursor-pointer transition-colors">Urban Mobility &amp; Smart Cities Hub</h5>
+<div class="flex items-center gap-2 mt-2">
+<div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+<p class="text-[10px] text-emerald-400 uppercase">Live Discussion</p>
+</div>
+</div>
+<div class="border-b border-white/10 pb-4">
+<p class="text-xs text-slate-400 mb-1">Reviewing</p>
+<h5 class="text-sm font-semibold text-white">Sustainable Supply Chain Audit</h5>
+<div class="flex items-center gap-2 mt-2">
+<div class="w-2 h-2 rounded-full bg-amber-400"></div>
+<p class="text-[10px] text-amber-400 uppercase">Awaiting your feedback</p>
+</div>
+</div>
+<div class="pb-2">
+<p class="text-xs text-slate-400 mb-1">Drafting</p>
+<h5 class="text-sm font-semibold text-white">Alternative Energy Subsidies</h5>
+<div class="flex items-center gap-2 mt-2">
+<div class="w-2 h-2 rounded-full bg-slate-500"></div>
+<p class="text-[10px] text-slate-400 uppercase">Draft status</p>
+</div>
+</div>
+</div>
+<button class="mt-8 text-emerald-400 text-[10px] font-bold uppercase tracking-widest flex items-center gap-2 hover:gap-4 transition-all">
+                                View Dashboard <span class="material-symbols-outlined text-sm">trending_flat</span>
+</button>
+</div>
+<div class="absolute bottom-[-40px] right-[-40px] w-48 h-48 bg-emerald-800/10 rounded-full blur-3xl"></div>
+</div>
+<div class="bg-white border border-slate-100 p-8 rounded-[40px]">
+<h4 class="font-manrope text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">Engagement Insights</h4>
+<div class="flex flex-col items-center">
+<!-- Custom Semicircle Data Vis -->
+<div class="relative w-40 h-20 mb-6 overflow-hidden">
+<div class="absolute top-0 left-0 w-40 h-40 border-[16px] border-surface-container rounded-full"></div>
+<div class="absolute top-0 left-0 w-40 h-40 border-[16px] border-emerald-900 border-b-transparent border-l-transparent rotate-[-45deg] rounded-full"></div>
+<div class="absolute bottom-0 w-full text-center">
+<p class="text-xl font-bold text-primary">74%</p>
+</div>
+</div>
+<p class="text-center text-xs text-slate-500 leading-relaxed px-4">Your current engagement score is in the top decile for the 2024 policy quarter.</p>
+</div>
+</div>
+</aside>
+</div>
+</main>
+</div>
+<!-- Footer Component -->
+<footer class="bg-white dark:bg-slate-950 w-full border-t border-slate-100 dark:border-slate-900 mt-32">
+<div class="max-w-7xl mx-auto px-12 py-16 flex flex-col md:flex-row justify-between items-center">
+<div class="mb-8 md:mb-0">
+<span class="font-black text-emerald-900 text-2xl tracking-tighter">Semicircle</span>
+<p class="font-manrope text-xs tracking-widest uppercase text-slate-400 mt-2">© 2024 Semicircle. Editorial Minimalism for the Modern Executive.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-manrope text-xs tracking-widest uppercase text-slate-400 hover:text-emerald-600 hover:underline decoration-emerald-500 underline-offset-4 transition-all duration-300" href="#">Privacy Policy</a>
+<a class="font-manrope text-xs tracking-widest uppercase text-slate-400 hover:text-emerald-600 hover:underline decoration-emerald-500 underline-offset-4 transition-all duration-300" href="#">Terms of Service</a>
+<a class="font-manrope text-xs tracking-widest uppercase text-slate-400 hover:text-emerald-600 hover:underline decoration-emerald-500 underline-offset-4 transition-all duration-300" href="#">Compliance</a>
+<a class="font-manrope text-xs tracking-widest uppercase text-slate-400 hover:text-emerald-600 hover:underline decoration-emerald-500 underline-offset-4 transition-all duration-300" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>
