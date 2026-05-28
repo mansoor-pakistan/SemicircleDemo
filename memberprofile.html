@@ -1,0 +1,313 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Executive Profile | The Arc Executive</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#002117",
+                    "on-tertiary-fixed-variant": "#005236",
+                    "surface-bright": "#f7f9fb",
+                    "on-tertiary-container": "#31c98f",
+                    "tertiary-fixed": "#6ffbbe",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#2b6954",
+                    "on-secondary-fixed-variant": "#3a485c",
+                    "primary-container": "#064e3b",
+                    "on-background": "#191c1e",
+                    "secondary-fixed": "#d5e3fd",
+                    "outline-variant": "#bfc9c3",
+                    "inverse-surface": "#2d3133",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container": "#eceef0",
+                    "on-tertiary-fixed": "#002113",
+                    "outline": "#707974",
+                    "tertiary": "#003623",
+                    "inverse-primary": "#95d3ba",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-high": "#e6e8ea",
+                    "on-error-container": "#93000a",
+                    "tertiary-container": "#004f34",
+                    "secondary-fixed-dim": "#b9c7e0",
+                    "on-surface-variant": "#404944",
+                    "secondary": "#515f74",
+                    "on-secondary-fixed": "#0d1c2f",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#57657b",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#d5e3fd",
+                    "primary-fixed-dim": "#95d3ba",
+                    "primary": "#003527",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#b0f0d6",
+                    "inverse-on-surface": "#eff1f3",
+                    "surface-container-low": "#f2f4f6",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed-dim": "#4edea3",
+                    "on-surface": "#191c1e",
+                    "surface-dim": "#d8dadc",
+                    "on-primary-fixed-variant": "#0b513d",
+                    "on-primary-container": "#80bea6",
+                    "background": "#f7f9fb",
+                    "surface-container-highest": "#e0e3e5",
+                    "surface": "#f7f9fb",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "120px",
+                    "margin-page": "64px",
+                    "gutter": "32px",
+                    "unit": "8px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Manrope"],
+                    "display-xl": ["Manrope"],
+                    "headline-md": ["Manrope"],
+                    "label-caps": ["Manrope"],
+                    "headline-lg": ["Manrope"],
+                    "body-md": ["Manrope"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-xl": ["60px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .arc-shape-right {
+            border-top-right-radius: 9999px;
+            border-bottom-right-radius: 9999px;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 32px;
+        }
+        .semantic-gradient {
+            background: linear-gradient(135deg, rgba(6, 78, 59, 0.05) 0%, rgba(255, 255, 255, 1) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-center px-12 h-20 max-w-[1440px] mx-auto">
+<div class="text-2xl font-extrabold tracking-tighter text-emerald-900 dark:text-emerald-50 font-manrope">Semicircle Arc Executive</div>
+<div class="hidden md:flex items-center space-x-8 font-manrope tracking-tight">
+<a class="text-slate-500 hover:text-emerald-800 transition-all duration-300" href="#">Insights</a>
+<a class="text-slate-500 hover:text-emerald-800 transition-all duration-300" href="#">Network</a>
+<a class="text-slate-500 hover:text-emerald-800 transition-all duration-300" href="#">Roundtables</a>
+<a class="text-slate-500 hover:text-emerald-800 transition-all duration-300" href="#">Briefings</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="hidden md:flex items-center gap-2 px-4 py-2 border border-slate-200 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors font-manrope text-sm font-semibold uppercase tracking-wider mr-2">
+<svg class="w-4 h-4 fill-current text-[#0077b5]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+</svg>
+  Import from LinkedIn
+</button><button class="hidden md:flex items-center gap-2 px-4 py-2 border border-emerald-800/20 text-emerald-900 rounded-lg hover:bg-emerald-50 transition-colors font-manrope text-sm font-semibold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+  Edit Profile
+</button><div class="w-10 h-10 rounded-full overflow-hidden border border-slate-200">
+<img alt="Executive User Profile" class="w-full h-full object-cover" data-alt="professional portrait of a confident middle-aged executive man with short grey hair wearing a tailored navy suit in a brightly lit modern office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDk3GS5AVYe_BxIpvgmTYWeLjeMeM6N-gK_iybWd51mKWyh180Kj98iBja_nCGir5-dXU57hnni_Pez0PKm6aQe_GWrWwleDw3OT0ytZ2JN9jwHKecxeWfbZ9TI-CN7T6CNB_A0nD-XRmFt7VnfMiAU4d2prBpUVhl5k5MmGhFWsyKFLdH04_gqjUghBnFctTkrn1EWlS-xQBfvegxwqlLoPE6SQjW79pqGn3L-bT5aDitMbrg9y3RIca_KkBGUBi7mMtNdXbXdqaNr">
+</div>
+</div>
+</div>
+</nav>
+<main class="mt-32 max-w-[1280px] mx-auto px-12 pb-32">
+<!-- Profile Hero Section -->
+<section class="mb-24">
+<div class="editorial-grid">
+<div class="col-span-12 md:col-span-4 lg:col-span-3">
+<div class="relative group">
+<div class="aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-lg">
+<img alt="Executive Headshot" class="w-full h-full object-cover" data-alt="professional portrait of a high-level executive with a confident gaze, neutral grey background, crisp cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtKWVUoyqbmCfV_OLT2U24q332tcYNnQ_PP4ecss2jzQmIJo85uvCBYTuo22MrkFFJzS9N60jC8OBHtQsNm6-66A0MW3wfjO2QkwZU71XkImCsqBD-S4YwnxiT67IUWPmXN3JRyhzB4SgQeZnZ49WvpA3nI5JKuJ9GsTAS4Nk-Kyt__Fig3qVh3FD3H_yE_rpUk4G9FAtopyWsUN0krr2QLHQUaaQfz29CoUTsFHUK4KmX-qVk996ft7ErQ2r9nUlpZ9AkYsf9Yt1Z">
+</div>
+<div class="absolute -bottom-4 -right-4 bg-primary text-on-primary px-4 py-2 rounded-lg flex items-center gap-2 shadow-xl">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-caps text-label-caps uppercase">Verified Member</span>
+</div><button class="absolute -bottom-4 -left-4 bg-white text-primary border border-slate-200 px-4 py-2 rounded-lg flex items-center gap-2 shadow-xl hover:bg-slate-50 transition-colors font-label-caps text-label-caps uppercase"><span class="material-symbols-outlined text-[18px]">chat_bubble</span>Message</button>
+</div>
+</div>
+<div class="col-span-12 md:col-span-8 lg:col-span-9 flex flex-col justify-center pt-8 md:pt-0">
+<span class="font-label-caps text-label-caps text-on-primary-fixed-variant mb-2 tracking-[0.2em] uppercase">Executive Mandate</span>
+<h1 class="font-display-xl text-display-xl text-primary mb-2">Kamran Ahmed</h1>
+<div class="group relative cursor-pointer rounded-lg hover:bg-slate-50 -ml-2 pl-2 py-1 transition-all">
+<p class="font-headline-md text-headline-md text-on-surface-variant font-light pr-8">
+    Chief Strategy Officer at <span class="font-bold text-on-background">Nexus Global Partners</span>
+</p>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-primary opacity-0 group-hover:opacity-100 transition-opacity text-[20px]">edit</span>
+</div>
+<div class="mt-8 flex gap-4">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-emerald-700">location_on</span>
+<span class="font-body-md text-body-md">Karachi, Pakistan</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-emerald-700">calendar_today</span>
+<span class="font-body-md text-body-md">Member since Dec 2022</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Professional Identity & My Arc -->
+<section class="mb-24 editorial-grid">
+<div class="col-span-12 lg:col-span-7">
+<div class="bg-white border border-slate-100 p-10 rounded-xl semantic-gradient"><div class="flex justify-between items-start mb-6">
+<h2 class="font-headline-md text-headline-md text-primary">Value Statement</h2>
+</div>
+<div class="group relative cursor-pointer rounded-lg hover:bg-white/50 -m-4 p-4 transition-all">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed pr-8">
+    Driving organizational transformation through data-centric strategic frameworks. Focused on bridging the gap between emerging AI capabilities and sustainable enterprise scale within the MENAP region. Committed to fostering high-impact executive networks that prioritize pragmatic innovation over speculative trends.
+  </p>
+<span class="material-symbols-outlined absolute right-4 top-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity text-[20px]">edit</span>
+</div></div>
+</div>
+<div class="col-span-12 lg:col-span-5">
+<div class="bg-surface-container-low border border-slate-100 p-10 rounded-xl h-full">
+<h2 class="font-headline-md text-headline-md text-primary mb-6">My Arc</h2>
+<div class="space-y-6">
+<div>
+<span class="font-label-caps text-label-caps text-on-tertiary-fixed-variant uppercase block mb-3">Core Industry</span>
+<div class="inline-flex items-center px-4 py-2 bg-primary-fixed text-on-primary-fixed rounded-lg font-bold">
+                                Technology <span class="mx-2 text-emerald-800/40">/</span> Artificial Intelligence
+                            </div>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-on-tertiary-fixed-variant uppercase block mb-3">Topics of Interest</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-white border border-slate-200 text-on-surface-variant rounded-full text-sm font-semibold">Venture Capital</span>
+<span class="px-3 py-1.5 bg-white border border-slate-200 text-on-surface-variant rounded-full text-sm font-semibold">ESG Frameworks</span>
+<span class="px-3 py-1.5 bg-white border border-slate-200 text-on-surface-variant rounded-full text-sm font-semibold">Supply Chain Resilience</span>
+<span class="px-3 py-1.5 bg-white border border-slate-200 text-on-surface-variant rounded-full text-sm font-semibold">Digital Sovereignty</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Impact Tracker -->
+<section class="mb-24">
+<h2 class="font-headline-md text-headline-md text-primary mb-10 text-center">Activity &amp; Impact Tracker</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Metric 1 -->
+<div class="bg-white border border-slate-100 p-8 rounded-xl text-center shadow-sm">
+<div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-emerald-50 text-emerald-800 rounded-full">
+<span class="material-symbols-outlined text-[32px]">how_to_reg</span>
+</div>
+<div class="text-4xl font-extrabold text-primary mb-1">124</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Polls Answered</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-white border border-slate-100 p-8 rounded-xl text-center shadow-sm border-b-4 border-b-emerald-600">
+<div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-emerald-50 text-emerald-800 rounded-full">
+<span class="material-symbols-outlined text-[32px]">forum</span>
+</div>
+<div class="text-4xl font-extrabold text-primary mb-1">18</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Discussions Started</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-white border border-slate-100 p-8 rounded-xl text-center shadow-sm">
+<div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-emerald-50 text-emerald-800 rounded-full">
+<span class="material-symbols-outlined text-[32px]">event_available</span>
+</div>
+<div class="text-4xl font-extrabold text-primary mb-1">42</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Events Attended</div>
+</div>
+</div>
+</section>
+<!-- Recent Activity Feed -->
+<section>
+<div class="flex justify-between mb-10 items-center">
+<h2 class="font-headline-md text-headline-md text-primary">Recent Activity Feed</h2>
+<div class="flex items-center gap-6 mr-8">
+<div class="flex items-center gap-3">
+<span class="text-xs font-label-caps uppercase tracking-widest text-slate-400">Visibility:</span>
+<div class="flex items-center bg-slate-100 p-1 rounded-full">
+<button class="px-3 py-1 text-[10px] font-bold uppercase rounded-full bg-white text-emerald-900 shadow-sm transition-all">Public</button>
+<button class="px-3 py-1 text-[10px] font-bold uppercase rounded-full text-slate-400 hover:text-slate-600 transition-all">Private</button>
+</div>
+</div>
+<div class="h-4 w-px bg-slate-200"></div>
+</div><a class="text-emerald-700 font-bold border-b border-emerald-700 pb-1 hover:text-emerald-900 transition-colors" href="#">View All Archive</a>
+</div>
+<div class="space-y-4">
+<!-- Activity Item 1 -->
+<div class="flex items-center justify-between p-6 bg-white border border-slate-100 rounded-xl hover:shadow-md transition-shadow">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 bg-emerald-900 text-white rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">ballot</span>
+</div>
+<div>
+<p class="font-body-lg text-body-lg text-on-background">Voted on: <span class="font-bold">The Future of Remote Work in Pakistan</span></p>
+<span class="text-sm text-slate-400">2 hours ago • Strategy &amp; Operations</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300">chevron_right</span>
+</div>
+<!-- Activity Item 2 -->
+<div class="flex items-center justify-between p-6 bg-white border border-slate-100 rounded-xl hover:shadow-md transition-shadow">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 bg-emerald-700 text-white rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">edit_square</span>
+</div>
+<div>
+<p class="font-body-lg text-body-lg text-on-background">Drafted Poll: <span class="font-bold">Sustainable Energy Infrastructure</span></p>
+<span class="text-sm text-slate-400">Yesterday • Policy &amp; Governance</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300">chevron_right</span>
+</div>
+<!-- Activity Item 3 -->
+<div class="flex items-center justify-between p-6 bg-white border border-slate-100 rounded-xl hover:shadow-md transition-shadow">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 bg-emerald-500 text-white rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">groups</span>
+</div>
+<div>
+<p class="font-body-lg text-body-lg text-on-background">Contributed to Roundtable: <span class="font-bold">Digital Currency Regulations 2024</span></p>
+<span class="text-sm text-slate-400">3 days ago • Financial Services</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300">chevron_right</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 pt-24 pb-12 mt-32">
+<div class="max-w-7xl mx-auto px-12 flex flex-col md:flex-row justify-between items-center gap-8 font-manrope text-sm uppercase tracking-widest text-emerald-950 dark:text-emerald-50">
+<div class="font-bold text-emerald-900">The Arc Global</div>
+<div class="flex gap-8 text-slate-400 dark:text-slate-600">
+<a class="hover:text-emerald-600 transition-colors hover:underline decoration-emerald-500/30 underline-offset-8" href="#">Privacy Protocol</a>
+<a class="hover:text-emerald-600 transition-colors hover:underline decoration-emerald-500/30 underline-offset-8" href="#">Terms of Access</a>
+<a class="hover:text-emerald-600 transition-colors hover:underline decoration-emerald-500/30 underline-offset-8" href="#">Editorial Mandate</a>
+<a class="hover:text-emerald-600 transition-colors hover:underline decoration-emerald-500/30 underline-offset-8" href="#">Contact Registry</a>
+</div>
+<div class="text-slate-400 dark:text-slate-600 lowercase tracking-normal italic">
+                © 2024 The Arc Global. For the exclusive use of members.
+            </div>
+</div>
+</footer>
+</body></html>
