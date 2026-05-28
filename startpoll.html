@@ -1,0 +1,295 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>VCast Semicircle | Quick Poll</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "inverse-on-surface": "#eff1f3",
+            "secondary": "#515f74",
+            "secondary-fixed-dim": "#b9c7e0",
+            "primary": "#003527",
+            "inverse-surface": "#2d3133",
+            "surface-variant": "#e0e3e5",
+            "on-secondary-container": "#57657b",
+            "secondary-container": "#d5e3fd",
+            "on-tertiary-fixed": "#002113",
+            "error": "#ba1a1a",
+            "surface-tint": "#2b6954",
+            "tertiary-fixed-dim": "#4edea3",
+            "on-error-container": "#93000a",
+            "on-tertiary-fixed-variant": "#005236",
+            "on-primary-container": "#80bea6",
+            "on-surface": "#191c1e",
+            "on-primary-fixed": "#002117",
+            "inverse-primary": "#95d3ba",
+            "outline": "#707974",
+            "on-background": "#191c1e",
+            "on-secondary-fixed-variant": "#3a485c",
+            "on-primary-fixed-variant": "#0b513d",
+            "background": "#f7f9fb",
+            "on-secondary": "#ffffff",
+            "outline-variant": "#bfc9c3",
+            "tertiary-fixed": "#6ffbbe",
+            "secondary-fixed": "#d5e3fd",
+            "surface-container-highest": "#e0e3e5",
+            "surface": "#f7f9fb",
+            "on-secondary-fixed": "#0d1c2f",
+            "on-error": "#ffffff",
+            "surface-container": "#eceef0",
+            "surface-dim": "#d8dadc",
+            "surface-container-lowest": "#ffffff",
+            "error-container": "#ffdad6",
+            "tertiary": "#003623",
+            "primary-container": "#064e3b",
+            "tertiary-container": "#004f34",
+            "surface-bright": "#f7f9fb",
+            "surface-container-high": "#e6e8ea",
+            "on-primary": "#ffffff",
+            "on-surface-variant": "#404944",
+            "surface-container-low": "#f2f4f6",
+            "on-tertiary": "#ffffff",
+            "primary-fixed-dim": "#95d3ba",
+            "primary-fixed": "#b0f0d6",
+            "on-tertiary-container": "#31c98f"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "unit": "8px",
+            "gutter": "32px",
+            "section-gap": "120px",
+            "margin-page": "64px",
+            "container-max": "1280px"
+          },
+          "fontFamily": {
+            "headline-lg": ["Manrope"],
+            "display-xl": ["Manrope"],
+            "body-md": ["Manrope"],
+            "body-lg": ["Manrope"],
+            "label-caps": ["Manrope"],
+            "headline-md": ["Manrope"]
+          },
+          "fontSize": {
+            "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+            "display-xl": ["60px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+            "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+            "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .custom-arc-btn {
+      border-top-right-radius: 9999px;
+      border-bottom-right-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Shared Component: TopAppBar -->
+<header class="bg-white/90 dark:bg-slate-950/90 backdrop-blur-md text-emerald-900 dark:text-emerald-400 font-manrope antialiased tracking-tight docked full-width top-0 sticky z-50 border-b border-slate-200 dark:border-slate-800 shadow-sm shadow-emerald-900/5">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-[1440px] mx-auto">
+<div class="flex items-center gap-8">
+<a class="text-xl font-bold tracking-tighter text-emerald-900 dark:text-emerald-50" href="#">VCast Semicircle</a>
+<nav class="hidden md:flex gap-6">
+<a class="text-slate-500 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="#">Insights</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="#">Roundtables</a>
+<a class="text-emerald-900 dark:text-emerald-400 font-semibold border-b-2 border-emerald-800 dark:border-emerald-400 pb-1" href="#">Polls</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="#">Archives</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<img alt="Executive Profile" class="w-10 h-10 rounded-full border border-outline-variant" data-alt="Close up portrait of a professional executive in business attire with a confident expression and soft office lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-lLtqLup8x9hnhDTyk-gHMo1ZVOzOAuYrCKRShf8qbH0PL2Fu15xTQPxQHiN-uR6O1rxupX7o6U9ZWEglTlr6jNn2NjQXiA8K-wIAsRfNJnJ1WDD6YKc_nRyC3_nI4Uj-7EpFXoCQzOOar4B5ikc2lup5IFiUBPa0tcbvzBB2iIqJwrsYBeXnQIkN9D8tgyESlUsOE-0o4vooXiltj3UZrauoj-DvzS0p2JfN-k1rvwKZ4sYv1duxTdrzJfDaUHR9X-Wn1xklDBS9">
+</div>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-margin-page py-section-gap grid grid-cols-12 gap-gutter">
+<!-- Title Section -->
+<div class="col-span-12 mb-unit*4">
+<div class="flex items-center gap-2 mb-unit">
+<span class="bg-primary-container/20 text-primary-container px-3 py-1 rounded-full text-label-caps font-label-caps uppercase">Community Tool</span>
+<span class="w-12 h-[1px] bg-outline-variant"></span>
+</div>
+<h1 class="font-display-xl text-display-xl text-on-surface mb-2">Start a Quick Poll</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl">Capture institutional sentiment in seconds. Your inquiry will be distributed to verified members of our executive circle.</p>
+</div>
+<!-- Main Form Area -->
+<div class="col-span-12 lg:col-span-8 space-y-gutter">
+<!-- Section: The Question -->
+<section class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="quiz">quiz</span>
+<h2 class="font-headline-md text-headline-md text-primary">Poll Inquiry</h2>
+</div>
+<div class="group border-b border-outline-variant focus-within:border-primary transition-all duration-300">
+<label class="font-label-caps text-label-caps text-secondary uppercase block mb-1">Question</label>
+<input class="w-full bg-transparent border-none p-0 pb-3 focus:ring-0 text-body-lg font-body-lg placeholder:text-outline-variant" placeholder="What is your organization's primary concern for Q4?" type="text">
+</div>
+</section>
+<!-- Section: Options -->
+<section class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm">
+<div class="flex justify-between items-center mb-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="checklist">checklist</span>
+<h2 class="font-headline-md text-headline-md text-primary">Multiple Choice Options</h2>
+</div>
+<span class="text-label-caps font-label-caps text-outline">MIN 2 OPTIONS</span>
+</div>
+<div class="space-y-6">
+<div class="flex items-center gap-4 group">
+<div class="w-6 h-6 rounded-full border-2 border-primary-container/30 flex items-center justify-center shrink-0">
+<div class="w-2 h-2 rounded-full bg-transparent"></div>
+</div>
+<div class="flex-1 border-b border-outline-variant/50 focus-within:border-primary transition-all duration-300">
+<input class="w-full bg-transparent border-none p-0 pb-2 focus:ring-0 text-body-md font-body-md" type="text" value="Supply chain volatility">
+</div>
+<button class="text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-6 h-6 rounded-full border-2 border-primary-container/30 flex items-center justify-center shrink-0">
+<div class="w-2 h-2 rounded-full bg-transparent"></div>
+</div>
+<div class="flex-1 border-b border-outline-variant/50 focus-within:border-primary transition-all duration-300">
+<input class="w-full bg-transparent border-none p-0 pb-2 focus:ring-0 text-body-md font-body-md" type="text" value="Labor market shifts">
+</div>
+<button class="text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-6 h-6 rounded-full border-2 border-primary border-primary-container flex items-center justify-center shrink-0">
+<div class="w-2 h-2 rounded-full bg-primary-container"></div>
+</div>
+<div class="flex-1 border-b border-primary transition-all duration-300">
+<input class="w-full bg-transparent border-none p-0 pb-2 focus:ring-0 text-body-md font-body-md italic text-outline" placeholder="Add option..." type="text">
+</div>
+<button class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full text-label-caps font-label-caps hover:bg-on-secondary-container hover:text-white transition-all">
+              ADD OPTION
+            </button>
+</div>
+</div>
+</section>
+<!-- Section: Targeting -->
+<section class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="target">track_changes</span>
+<h2 class="font-headline-md text-headline-md text-primary">Industry Targeting</h2>
+</div>
+<p class="text-body-md text-secondary mb-4">Select industries that will see this poll on their dashboards.</p>
+<div class="flex flex-wrap gap-2">
+<button class="bg-primary text-on-primary px-4 py-2 rounded-full text-label-caps font-label-caps flex items-center gap-2">
+            FINTECH <span class="material-symbols-outlined text-sm" data-icon="close">close</span>
+</button>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-full text-label-caps font-label-caps flex items-center gap-2">
+            MANUFACTURING <span class="material-symbols-outlined text-sm" data-icon="close">close</span>
+</button>
+<button class="bg-surface-container-high text-on-surface-variant hover:bg-outline-variant px-4 py-2 rounded-full text-label-caps font-label-caps transition-all">
+            + RETAIL
+          </button>
+<button class="bg-surface-container-high text-on-surface-variant hover:bg-outline-variant px-4 py-2 rounded-full text-label-caps font-label-caps transition-all">
+            + LOGISTICS
+          </button>
+<button class="bg-surface-container-high text-on-surface-variant hover:bg-outline-variant px-4 py-2 rounded-full text-label-caps font-label-caps transition-all">
+            + ENERGY
+          </button>
+</div>
+</section>
+<!-- Submit Footer -->
+<div class="flex items-center justify-between pt-8">
+<button class="text-secondary font-label-caps text-label-caps hover:text-primary transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+          DISCARD DRAFT
+        </button>
+<div class="flex items-center gap-6">
+<div class="flex flex-col items-end">
+<span class="text-label-caps font-label-caps text-primary font-bold">READY TO SUBMIT</span>
+<span class="text-[10px] text-outline">ESTIMATED REACH: 4,200 EXECS</span>
+</div>
+<button class="bg-primary text-on-primary px-10 py-4 custom-arc-btn font-bold text-body-md hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-0.5 transition-all duration-300">
+            Publish Poll
+          </button>
+</div>
+</div>
+</div>
+<!-- Sidebar Info -->
+<aside class="col-span-12 lg:col-span-4 space-y-gutter">
+<div class="bg-secondary-container/30 border border-secondary-container p-6 rounded-xl relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-secondary-container/50 rounded-full"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-4 text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="policy">policy</span>
+<span class="font-label-caps text-label-caps font-bold">Editorial Vetting</span>
+</div>
+<p class="text-body-md text-on-secondary-container leading-relaxed">
+            Every community poll is reviewed by the VCast Editorial Board to ensure the highest quality of professional discourse.
+          </p>
+<ul class="mt-4 space-y-2">
+<li class="flex items-start gap-2 text-label-caps text-on-secondary-container">
+<span class="material-symbols-outlined text-[16px] mt-0.5" data-icon="check_circle">check_circle</span>
+              Objective Phrasing Required
+            </li>
+<li class="flex items-start gap-2 text-label-caps text-on-secondary-container">
+<span class="material-symbols-outlined text-[16px] mt-0.5" data-icon="check_circle">check_circle</span>
+              No Commercial Solicitations
+            </li>
+</ul>
+</div>
+</div>
+<div class="border border-outline-variant p-6 rounded-xl bg-white">
+<h3 class="font-label-caps text-label-caps text-secondary mb-4 uppercase tracking-widest">Active Forecast</h3>
+<div class="h-32 bg-slate-50 flex items-center justify-center mb-4 rounded-lg">
+<!-- Placeholder for Semicircular Data Vis -->
+<svg class="w-32 h-16" viewBox="0 0 100 50">
+<path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="#eceef0" stroke-linecap="round" stroke-width="12"></path>
+<path d="M 10 50 A 40 40 0 0 1 65 15" fill="none" stroke="#003527" stroke-linecap="round" stroke-width="12"></path>
+</svg>
+</div>
+<p class="text-[12px] text-center text-outline font-medium">82% Consensus on Similar Topics</p>
+</div>
+<div class="p-6 rounded-xl border border-dashed border-outline-variant bg-slate-50">
+<h3 class="font-label-caps text-label-caps text-secondary mb-2 uppercase">Preview Appearance</h3>
+<div class="bg-white p-4 rounded shadow-sm border border-slate-100">
+<div class="flex items-center gap-2 mb-2">
+<div class="w-6 h-6 bg-emerald-100 rounded-full"></div>
+<div class="h-2 w-24 bg-slate-100 rounded"></div>
+</div>
+<div class="h-3 w-full bg-slate-100 rounded mb-4"></div>
+<div class="space-y-2">
+<div class="h-8 w-full border border-slate-100 rounded"></div>
+<div class="h-8 w-full border border-slate-100 rounded"></div>
+</div>
+</div>
+</div>
+</aside>
+</main>
+<footer class="mt-section-gap border-t border-outline-variant py-gutter text-center">
+<div class="max-w-[1280px] mx-auto px-margin-page flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-caps text-label-caps text-outline">© 2024 VCAST SEMICIRCLE. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-8">
+<a class="font-label-caps text-label-caps text-outline hover:text-primary" href="#">PRIVACY CHARTER</a>
+<a class="font-label-caps text-label-caps text-outline hover:text-primary" href="#">GOVERNANCE</a>
+<a class="font-label-caps text-label-caps text-outline hover:text-primary" href="#">CONTACT</a>
+</div>
+</div>
+</footer>
+</body></html>
