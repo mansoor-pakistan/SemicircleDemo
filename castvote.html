@@ -1,0 +1,338 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-container": "#d5e3fd",
+                      "primary-fixed-dim": "#95d3ba",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-high": "#e6e8ea",
+                      "on-secondary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "error": "#ba1a1a",
+                      "inverse-primary": "#95d3ba",
+                      "inverse-on-surface": "#eff1f3",
+                      "primary-container": "#064e3b",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#0b513d",
+                      "on-error-container": "#93000a",
+                      "surface-tint": "#2b6954",
+                      "on-tertiary-fixed-variant": "#005236",
+                      "tertiary-fixed-dim": "#4edea3",
+                      "on-tertiary-container": "#31c98f",
+                      "on-surface-variant": "#404944",
+                      "on-secondary-fixed": "#0d1c2f",
+                      "outline": "#707974",
+                      "secondary-fixed-dim": "#b9c7e0",
+                      "on-primary-container": "#80bea6",
+                      "background": "#f7f9fb",
+                      "secondary-fixed": "#d5e3fd",
+                      "primary": "#003527",
+                      "inverse-surface": "#2d3133",
+                      "outline-variant": "#bfc9c3",
+                      "on-surface": "#191c1e",
+                      "surface-container-low": "#f2f4f6",
+                      "on-background": "#191c1e",
+                      "on-primary-fixed": "#002117",
+                      "surface-bright": "#f7f9fb",
+                      "on-secondary-fixed-variant": "#3a485c",
+                      "on-primary": "#ffffff",
+                      "on-tertiary-fixed": "#002113",
+                      "surface-container-highest": "#e0e3e5",
+                      "on-secondary-container": "#57657b",
+                      "secondary": "#515f74",
+                      "tertiary-fixed": "#6ffbbe",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container": "#eceef0",
+                      "surface": "#f7f9fb",
+                      "tertiary-container": "#004f34",
+                      "surface-dim": "#d8dadc",
+                      "primary-fixed": "#b0f0d6",
+                      "surface-variant": "#e0e3e5",
+                      "tertiary": "#003623"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "container-max": "1280px",
+                      "section-gap": "120px",
+                      "gutter": "32px",
+                      "margin-page": "64px"
+              },
+              "fontFamily": {
+                      "display-xl": ["Manrope"],
+                      "label-caps": ["Manrope"],
+                      "headline-md": ["Manrope"],
+                      "body-md": ["Manrope"],
+                      "headline-lg": ["Manrope"],
+                      "body-lg": ["Manrope"]
+              },
+              "fontSize": {
+                      "display-xl": ["60px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .arc-button {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            border-top-right-radius: 9999px;
+            border-bottom-right-radius: 9999px;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 32px;
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background antialiased">
+<!-- TopNavBar -->
+<nav class="bg-white/90 backdrop-blur-md text-emerald-900 font-manrope antialiased tracking-tight docked full-width top-0 border-b border-slate-200 shadow-sm shadow-emerald-900/5 flex justify-between items-center px-8 w-full h-16 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<span class="text-lg font-black tracking-tighter text-emerald-900 uppercase">VCast Semicircle</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-emerald-900 font-bold border-b-2 border-emerald-900 hover:text-emerald-700 transition-colors" href="#">Intelligence</a>
+<a class="text-slate-500 font-medium hover:text-emerald-700 transition-colors" href="#">Polls</a>
+<a class="text-slate-500 font-medium hover:text-emerald-700 transition-colors" href="#">Strategy</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="pl-10 pr-4 py-1.5 bg-slate-100 border-none rounded-full text-sm focus:ring-2 focus:ring-primary-container w-64" placeholder="Search Intelligence..." type="text">
+</div>
+<button class="material-symbols-outlined text-slate-500 hover:text-emerald-900 transition-colors">notifications</button>
+<button class="material-symbols-outlined text-slate-500 hover:text-emerald-900 transition-colors">account_circle</button>
+<button class="arc-button bg-primary text-white px-6 py-2 text-sm font-bold hover:opacity-90 transition-all active:scale-[0.98]">
+                Request an Invitation
+            </button>
+</div>
+</nav>
+<!-- SideNavBar (Desktop Only) -->
+<aside class="hidden lg:flex fixed left-0 top-16 h-[calc(100vh-64px)] w-64 border-r border-slate-200 bg-slate-50 flex-col py-8 z-40">
+<div class="px-6 mb-8">
+<p class="text-emerald-900 font-bold font-manrope text-sm">Executive Suite</p>
+<p class="text-slate-400 text-xs font-medium">Premium Tier</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 text-slate-500 py-3 px-6 hover:text-emerald-800 hover:bg-slate-100 transition-all font-manrope text-sm font-semibold" href="#">
+<span class="material-symbols-outlined">insights</span> Intelligence
+            </a>
+<a class="flex items-center gap-3 text-emerald-900 bg-emerald-50/50 rounded-r-full py-3 px-6 border-l-4 border-emerald-900 transition-all font-manrope text-sm font-semibold" href="#">
+<span class="material-symbols-outlined">ballot</span> Polls
+            </a>
+<a class="flex items-center gap-3 text-slate-500 py-3 px-6 hover:text-emerald-800 hover:bg-slate-100 transition-all font-manrope text-sm font-semibold" href="#">
+<span class="material-symbols-outlined">architecture</span> Strategy
+            </a>
+<a class="flex items-center gap-3 text-slate-500 py-3 px-6 hover:text-emerald-800 hover:bg-slate-100 transition-all font-manrope text-sm font-semibold" href="#">
+<span class="material-symbols-outlined">query_stats</span> Analytics
+            </a>
+<a class="flex items-center gap-3 text-slate-500 py-3 px-6 hover:text-emerald-800 hover:bg-slate-100 transition-all font-manrope text-sm font-semibold" href="#">
+<span class="material-symbols-outlined">groups</span> Network
+            </a>
+</nav>
+<div class="mt-auto border-t border-slate-200 pt-4 space-y-1">
+<a class="flex items-center gap-3 text-slate-500 py-3 px-6 hover:text-emerald-800 hover:bg-slate-100 transition-all font-manrope text-sm font-semibold" href="#">
+<span class="material-symbols-outlined">help_outline</span> Support
+            </a>
+<a class="flex items-center gap-3 text-slate-500 py-3 px-6 hover:text-emerald-800 hover:bg-slate-100 transition-all font-manrope text-sm font-semibold" href="#">
+<span class="material-symbols-outlined">settings</span> Settings
+            </a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="lg:ml-64 p-8 md:p-16 max-w-7xl mx-auto">
+<!-- Breadcrumb & Status -->
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-2 text-slate-500 text-sm font-medium">
+<span>Polls</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-emerald-900">Active Ballot</span>
+</div>
+<div class="flex items-center gap-2 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
+<span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+<span class="text-emerald-900 text-xs font-bold uppercase tracking-wider">Live Voting</span>
+</div>
+</div>
+<!-- Header Section -->
+<header class="mb-12">
+<h1 class="font-display-xl text-display-xl text-primary mb-6 max-w-4xl">
+                What is the single greatest risk to economic stability in 2025?
+            </h1>
+<div class="flex flex-wrap items-center gap-6 text-slate-600">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-800">schedule</span>
+<span class="text-sm font-semibold">Closes in 48 Hours</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-800">how_to_reg</span>
+<span class="text-sm font-semibold">1,248 Executives Participated</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-800">verified</span>
+<span class="text-sm font-semibold">Verified Global Strategy Pool</span>
+</div>
+</div>
+</header>
+<div class="editorial-grid">
+<!-- Left: Voting Interface -->
+<section class="col-span-12 lg:col-span-8 space-y-8">
+<!-- Context Card -->
+<div class="bg-white border border-slate-200 p-8 rounded-xl shadow-sm">
+<h3 class="font-headline-md text-headline-md text-primary mb-4 border-b border-slate-100 pb-4">Background Briefing</h3>
+<p class="text-body-lg text-slate-600 mb-6 leading-relaxed">
+                        As we approach the mid-decade mark, global markets are navigating a complex confluence of geopolitical realignments, technological acceleration, and structural fiscal shifts. This poll seeks to identify the primary "tail risk" that executive leadership should prioritize in their 2025 strategic planning.
+                    </p>
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover grayscale" data-alt="portrait of a professional male economist in a minimalist grey studio setting looking focused" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOXUzhKbMSchNrtvGzm5gTkzp8E2ovIej7Ceq7kGZDGvHXpqQ-6QQePSCfp1D5_Qo_HzPJ_G7zlkM_ayJujQ2RF0zS3vt3mjcF9DxgvxFNPQUFjtC8u6I5DyDAnmhzw-32835rtvAEqZwCblcrG07JR-tjGHjaz4tN3wQigM-P7KCxgf1Ph6uhYGcg9b7b5BJJE9Tr3bjN0kEe9G5yu13gJ_nVcTh2Fj0BJM7_RmtCz3csZfHPD4Y8BxwdlccDLEXTMHbgVRVc-NEW">
+<div>
+<p class="text-sm font-bold text-primary">Dr. Alistair Vance</p>
+<p class="text-xs text-slate-500">Chief Global Strategist, VCast Intelligence</p>
+</div>
+</div>
+</div>
+<!-- Ballot Options -->
+<div class="space-y-4">
+<label class="group relative flex items-center p-6 bg-white border border-slate-200 rounded-xl cursor-pointer hover:border-emerald-900 transition-all">
+<input class="w-5 h-5 text-emerald-900 focus:ring-emerald-900 border-slate-300" name="economic-risk" type="radio">
+<div class="ml-6 flex-1">
+<span class="block text-lg font-bold text-primary mb-1">Geopolitical Fragmentation &amp; Trade Blocks</span>
+<span class="block text-sm text-slate-500">The acceleration of the "Two-World" economic system.</span>
+</div>
+<span class="material-symbols-outlined opacity-0 group-hover:opacity-100 text-emerald-900 transition-opacity">check_circle</span>
+</label>
+<label class="group relative flex items-center p-6 bg-white border border-emerald-900 ring-1 ring-emerald-900 rounded-xl cursor-pointer transition-all shadow-md shadow-emerald-900/5">
+<input checked="" class="w-5 h-5 text-emerald-900 focus:ring-emerald-900 border-emerald-900" name="economic-risk" type="radio">
+<div class="ml-6 flex-1">
+<span class="block text-lg font-bold text-primary mb-1 text-emerald-900">Rapid Sovereign Debt Contagion</span>
+<span class="block text-sm text-slate-500">Structural weaknesses in G7 fiscal policy meeting high interest floors.</span>
+</div>
+<span class="material-symbols-outlined text-emerald-900">check_circle</span>
+</label>
+<label class="group relative flex items-center p-6 bg-white border border-slate-200 rounded-xl cursor-pointer hover:border-emerald-900 transition-all">
+<input class="w-5 h-5 text-emerald-900 focus:ring-emerald-900 border-slate-300" name="economic-risk" type="radio">
+<div class="ml-6 flex-1">
+<span class="block text-lg font-bold text-primary mb-1">AI-Driven Labor Dislocation</span>
+<span class="block text-sm text-slate-500">Productivity gains failing to offset rapid sector-wide employment shifts.</span>
+</div>
+<span class="material-symbols-outlined opacity-0 group-hover:opacity-100 text-emerald-900 transition-opacity">check_circle</span>
+</label>
+<label class="group relative flex items-center p-6 bg-white border border-slate-200 rounded-xl cursor-pointer hover:border-emerald-900 transition-all">
+<input class="w-5 h-5 text-emerald-900 focus:ring-emerald-900 border-slate-300" name="economic-risk" type="radio">
+<div class="ml-6 flex-1">
+<span class="block text-lg font-bold text-primary mb-1">Climate-Induced Supply Chain Shocks</span>
+<span class="block text-sm text-slate-500">Systemic failure of critical maritime corridors due to ecological shifts.</span>
+</div>
+<span class="material-symbols-outlined opacity-0 group-hover:opacity-100 text-emerald-900 transition-opacity">check_circle</span>
+</label>
+</div>
+<!-- Action Bar -->
+<div class="flex items-center justify-between pt-8 border-t border-slate-200">
+<div class="flex items-center gap-2 text-slate-400">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span class="text-xs font-semibold uppercase">Voting is Anonymous &amp; Encrypted</span>
+</div>
+<button class="arc-button bg-primary text-white px-12 py-4 text-lg font-bold hover:bg-emerald-800 transition-all shadow-xl shadow-emerald-900/10 active:scale-95">
+                        Submit Vote
+                    </button>
+</div>
+</section>
+<!-- Right: Strategic Sidebar -->
+<aside class="col-span-12 lg:col-span-4 space-y-8">
+<!-- Why This Matters Card -->
+<div class="bg-primary text-white p-8 rounded-xl relative overflow-hidden">
+<div class="relative z-10">
+<h4 class="font-label-caps text-label-caps text-emerald-400 mb-4 uppercase tracking-[0.2em]">Strategic Context</h4>
+<h3 class="font-headline-md text-headline-md mb-4">Why this matters</h3>
+<p class="text-emerald-100 leading-relaxed opacity-90 mb-6">
+                            Individual choices in this poll aggregate to form the VCast Sentiment Index, used by global treasuries and private equity funds to calibrate risk appetite. Your participation directly influences the market perception of stability.
+                        </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-emerald-400">trending_up</span>
+<span class="text-sm font-medium">Influences Q3 Sector Allocation</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-emerald-400">hub</span>
+<span class="text-sm font-medium">Connects with Peers in Tier-1 Groups</span>
+</li>
+</ul>
+</div>
+<!-- Decorative Semicircle Arc -->
+<div class="absolute -right-16 -bottom-16 w-48 h-48 border-[24px] border-emerald-400/10 rounded-full"></div>
+</div>
+<!-- Secondary Insight Card -->
+<div class="bg-white border border-slate-200 p-8 rounded-xl">
+<h4 class="font-label-caps text-label-caps text-slate-400 mb-6 uppercase tracking-[0.2em]">Community Pulse</h4>
+<div class="space-y-6">
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-bold text-primary uppercase">
+<span>Global Sentiment</span>
+<span>High Concern</span>
+</div>
+<div class="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-emerald-600 w-3/4"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-bold text-primary uppercase">
+<span>Data Confidence</span>
+<span>98.4%</span>
+</div>
+<div class="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-emerald-600 w-[98%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual Arc Decoration -->
+<div class="aspect-video rounded-xl overflow-hidden relative group">
+<img class="w-full h-full object-cover grayscale brightness-50 group-hover:scale-105 transition-transform duration-700" data-alt="Modern architectural glass building reflecting a moody sky with sharp angles and clean lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE5mVbQM1MKVIkDqwaIaL2M50nEaBrfnD2KWH0lUvz2ry_sw4WuhHLgNuCAGpv7qZK5n6AyY2zXwiZEQE3nrHTb-UC0Df5j8V0qXv8dR1TVolA22Ph3vKTDbBKLCjp_TiTJiFh3VXkUH8J2-Kim81XUbyu0zuvmutQc47niMEQEI5QekTqpD2WPk_mzNGytOmxL75P1ejDycPnUJusj-PNdew5Pz_xJhnR5sCPA3PscD4ZJLk3GJtBk8zizD7tOPz0yqjB-Zu-Rexr">
+<div class="absolute inset-0 bg-emerald-900/20 mix-blend-multiply"></div>
+<div class="absolute inset-0 p-6 flex flex-col justify-end">
+<span class="text-emerald-400 text-xs font-bold uppercase tracking-widest mb-2">Member Exclusive</span>
+<p class="text-white font-bold leading-tight">Access the deep-dive analysis on Sovereign Debt risks.</p>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer Space -->
+<footer class="mt-section-gap py-16 border-t border-slate-200">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2">
+<span class="text-emerald-900 font-black tracking-tighter uppercase">VCast</span>
+<span class="text-slate-400 text-sm">© 2024 VCast Semicircle Intelligence</span>
+</div>
+<div class="flex gap-8 text-sm font-semibold text-slate-500">
+<a class="hover:text-emerald-900 transition-colors" href="#">Methodology</a>
+<a class="hover:text-emerald-900 transition-colors" href="#">Privacy Protocol</a>
+<a class="hover:text-emerald-900 transition-colors" href="#">Term of Service</a>
+</div>
+</div>
+</footer>
+</body></html>
