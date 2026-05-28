@@ -1,0 +1,395 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>VCast Semicircle | Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f0f4fd",
+                        "surface-container-highest": "#dee3eb",
+                        "on-primary-fixed": "#00210c",
+                        "on-tertiary-fixed": "#410007",
+                        "on-secondary-fixed-variant": "#004d66",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#2fc6ff",
+                        "surface-container-high": "#e4e8f1",
+                        "on-secondary-container": "#004f6a",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#72d2ff",
+                        "on-surface": "#171c22",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#66de8a",
+                        "primary": "#006b33",
+                        "surface-container": "#eaeef7",
+                        "primary-fixed": "#83fba4",
+                        "on-surface-variant": "#3e4a3f",
+                        "tertiary": "#ab2c34",
+                        "primary-container": "#008743",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#005226",
+                        "on-background": "#171c22",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#f6fff3",
+                        "tertiary-fixed": "#ffdad8",
+                        "surface-dim": "#d6dae3",
+                        "surface-bright": "#f8f9ff",
+                        "surface": "#f8f9ff",
+                        "background": "#f8f9ff",
+                        "tertiary-container": "#cc454a",
+                        "on-tertiary-fixed-variant": "#8d1421",
+                        "secondary": "#006687",
+                        "inverse-surface": "#2c3137",
+                        "outline": "#6e7a6e",
+                        "on-secondary-fixed": "#001e2b",
+                        "surface-variant": "#dee3eb",
+                        "outline-variant": "#bdcabb",
+                        "tertiary-fixed-dim": "#ffb3b1",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#66de8a",
+                        "secondary-fixed": "#c0e8ff",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#fffbff",
+                        "inverse-on-surface": "#edf1fa",
+                        "surface-tint": "#006d35"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope", "sans-serif"],
+                        "display": ["Manrope", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased">
+<!-- Top Navigation Bar (Shared Component: TopNavBar) -->
+<header class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl shadow-[0_20px_40px_rgba(23,28,34,0.06)] h-16 flex justify-between items-center px-8 font-headline">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-extrabold tracking-tighter text-primary">VCast Semicircle</span>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-primary font-bold border-b-2 border-primary py-1" href="#">Dashboard</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Content</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Events</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Messaging</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="bg-surface-container border-none rounded-xl pl-10 pr-4 py-2 w-64 focus:ring-2 focus:ring-primary text-sm" placeholder="Search VCast..." type="text">
+</div>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high transition-colors rounded-full relative active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high transition-colors rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden ml-2 border border-outline-variant">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="Portrait of a professional man in a dark blazer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD03qppysqKY2Uk3k6E-dQ8BfyeHxYyWJrpAP23RkiVeXcRqmih95uScGRT1BWn5iHQhW27bVJ7apSQua51UdW6GVOwm2G76RePExU9k7IG3JxWDXrKnfYXewI8nJjj_WmFi6fcoKSb4QDpx3tM37b1F8cxJRTFhR0rNj7kJnHSH-0KWo5aP2PmfGbi_Am4bYEP1mYAy--iU06DP_-YCpvTY8gb2B-SdMDPVoQr6GFwM-M1e8oUBbV19YpVL9zDD6HaOdKzoBhNrALI">
+</div>
+</div>
+</header>
+<!-- Side Navigation (Shared Component: SideNavBar) -->
+<aside class="hidden xl:flex flex-col py-6 px-4 space-y-2 h-screen w-64 fixed left-0 top-0 bg-surface-container-low border-r border-outline-variant z-40 pt-20">
+<div class="px-2 mb-6">
+<h2 class="font-headline font-black text-primary text-lg">VCast Semicircle</h2>
+<p class="font-body text-xs font-medium tracking-wide text-on-surface-variant uppercase">Editorial CMS</p>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-fixed text-on-primary-fixed font-semibold rounded-xl transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-xl transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="article">article</span>
+<span class="text-sm">Content</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-xl transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="text-sm">Events</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-xl transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+<span class="text-sm">Messaging</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-xl transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="admin_panel_settings">admin_panel_settings</span>
+<span class="text-sm">Admin CMS</span>
+</a>
+</nav>
+<div class="mt-auto space-y-1 pt-6 border-t border-outline-variant">
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:bg-surface-container-high rounded-xl transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="help">help</span>
+<span class="text-xs">Help</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:bg-surface-container-high rounded-xl transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="settings">settings</span>
+<span class="text-xs">Settings</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="pt-20 pb-12 xl:pl-64 min-h-screen">
+<div class="max-w-[1400px] mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+<!-- Left Column: Subscription Rail -->
+<section class="md:col-span-3 space-y-6">
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-outline-variant">
+<h3 class="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant mb-6 flex items-center justify-between">
+                        Thematic Areas
+                        <span class="material-symbols-outlined text-sm" data-icon="tune">tune</span>
+</h3>
+<div class="space-y-4">
+<div class="flex items-center justify-between group">
+<span class="text-sm font-semibold text-primary">#FinTech</span>
+<button class="text-[10px] px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-bold uppercase tracking-wider">Joined</button>
+</div>
+<div class="flex items-center justify-between group">
+<span class="text-sm font-semibold text-on-surface">#Agriculture</span>
+<button class="text-[10px] px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-bold uppercase tracking-wider hover:bg-primary hover:text-on-primary transition-colors">Join</button>
+</div>
+<div class="flex items-center justify-between group">
+<span class="text-sm font-semibold text-on-surface">#Marketing</span>
+<button class="text-[10px] px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-bold uppercase tracking-wider hover:bg-primary hover:text-on-primary transition-colors">Join</button>
+</div>
+<div class="flex items-center justify-between group">
+<span class="text-sm font-semibold text-primary">#Sustainability</span>
+<button class="text-[10px] px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-bold uppercase tracking-wider">Joined</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-6 border border-outline-variant/50">
+<h3 class="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant mb-6">Active Mentions</h3>
+<div class="space-y-4">
+<div class="flex gap-3 items-start">
+<div class="w-1.5 h-1.5 mt-2 rounded-full bg-primary"></div>
+<div>
+<p class="text-sm font-medium leading-tight">Sarah Chen tagged you in <span class="text-primary font-bold">Q4 Strategic Review</span></p>
+<span class="text-[10px] text-outline font-bold uppercase mt-1 block">2 hours ago</span>
+</div>
+</div>
+<div class="flex gap-3 items-start">
+<div class="w-1.5 h-1.5 mt-2 rounded-full bg-primary"></div>
+<div>
+<p class="text-sm font-medium leading-tight">System Notification: New <span class="text-primary font-bold">FinTech</span> whitepaper</p>
+<span class="text-[10px] text-outline font-bold uppercase mt-1 block">5 hours ago</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Center Column: The Bulletin -->
+<section class="md:col-span-6 space-y-6">
+<!-- Composer -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm border border-outline-variant mb-6">
+<div class="flex gap-4 items-center">
+<img alt="User avatar" class="w-10 h-10 rounded-full object-cover ring-2 ring-primary-fixed" data-alt="Executive portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsrGh_YSWbTWwOnAADAsGpLoXqagZaee_aQZUPXMnakINPbbqghtD-7erP5Niera05U0ZUHAYicXxA5PKfH7OuOkMZnA-eBsKAymyactzAj3GyZp0uilbkx7sj3CePKe2kOFYS9iPKHGFlBA2XdIpAmrP4U1emKhEyM2kySk6P_kQReb8D8zrVg1TDtob7GFcBBgHRWSVlNmk7moCaBllyI554wcHcjc6Xcxz5AX8XefevJN2p-h0J524Q6yfj_B4YJ7jVopN5RbzA">
+<button class="bg-surface-container text-on-surface-variant text-left px-6 py-3 rounded-xl flex-grow text-sm hover:bg-surface-container-high transition-colors border border-outline-variant">
+                            Share an insight or start a discussion...
+                        </button>
+</div>
+</div>
+<!-- Featured Post -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm border border-outline-variant">
+<div class="p-6">
+<div class="flex justify-between items-start mb-6">
+<div class="flex gap-4 items-center">
+<div class="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" data-icon="videocam">videocam</span>
+</div>
+<div>
+<h4 class="text-base font-extrabold text-on-surface leading-tight">VCast Semicircle Special: Future of DeFi</h4>
+<p class="text-xs text-on-surface-variant font-medium">Editorial Team • 3 hours ago</p>
+</div>
+</div>
+<button class="p-2 rounded-xl hover:bg-surface-container-high text-outline transition-colors">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+</button>
+</div>
+<div class="relative rounded-xl overflow-hidden mb-6 aspect-video group cursor-pointer">
+<img alt="Video preview" class="w-full h-full object-cover" data-alt="Abstract 3D blockchain nodes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnmzO5Jb_0qpDmLUljLZoNA2pr_LMSnWNej_cQuqBRgz2zBDAGL147oEQ5PTuNe_lngqWDd-1lxqiuLwlxhbV_BMeO37tnSJMf4W_nr_ycAK2n17n74Rf3xfmy1sH8iYL0AJcGoIaJVAqyQ9q05tHtDp76mlksng8c-sNvKiJiqUZ7hgT8LX3uKTs_uc0vN0aBFAEZmdl1Yes08M_x7E-FpA1GmJvRmN7TgxCyNf-SYSSDQSqExapGa-D46yNONa9TIx0Dqv70y_NK">
+<div class="absolute inset-0 bg-primary-container/20 flex items-center justify-center group-hover:bg-primary-container/40 transition-all">
+<div class="w-16 h-16 rounded-full bg-surface/20 backdrop-blur-md flex items-center justify-center border border-surface/40 shadow-xl">
+<span class="material-symbols-outlined text-surface text-4xl" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-4 right-4 bg-inverse-surface/80 backdrop-blur-md text-inverse-on-surface text-[10px] font-bold px-2 py-1 rounded">12:45</div>
+</div>
+<div class="mb-8 bg-surface-container-low p-4 rounded-xl border border-outline-variant">
+<h5 class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-4">Quick Poll: Market Sentiment</h5>
+<div class="space-y-3">
+<div class="relative h-12 group cursor-pointer overflow-hidden rounded-xl border border-outline-variant bg-surface-container-lowest">
+<div class="absolute inset-y-0 left-0 bg-primary-fixed-dim/50 w-[64%] border-r border-primary"></div>
+<div class="relative px-4 h-full flex items-center justify-between text-sm">
+<span class="font-bold text-on-surface">Bullish on Integration</span>
+<span class="text-xs font-black text-on-primary-fixed-variant">64%</span>
+</div>
+</div>
+<div class="relative h-12 group cursor-pointer overflow-hidden rounded-xl border border-outline-variant bg-surface-container-lowest">
+<div class="absolute inset-y-0 left-0 bg-surface-container w-[36%] border-r border-outline-variant"></div>
+<div class="relative px-4 h-full flex items-center justify-between text-sm">
+<span class="font-bold text-on-surface-variant">Skeptical of Scale</span>
+<span class="text-xs font-black text-on-surface-variant">36%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-8 pt-6 border-t border-outline-variant">
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-lg" data-icon="thumb_up">thumb_up</span>
+                                2.4k
+                            </button>
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-lg" data-icon="forum">forum</span>
+                                84 Comments
+                            </button>
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-lg" data-icon="share">share</span>
+                                Share
+                            </button>
+</div>
+</div>
+<!-- Discussion Thread -->
+<div class="bg-surface-container-low/80 p-6 space-y-6 border-t border-outline-variant">
+<div class="flex gap-4">
+<img alt="User" class="w-8 h-8 rounded-xl object-cover ring-2 ring-surface-container-lowest" data-alt="Female professional portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDDg-414ZizlXBZIDgVUJHIsd1V7Nuzyl61X_zWoXCUoFY1lc-i8-bmWAIb4n8gCTfni3GT-fl-VZIMup_F_8n3WgG6BvVHnhZ10j1U3e1tSa5joMIvRBZEpoc7tHFAWSys361IXqarGwSRAVnRcqRUsbNMKUwnp7B2bEJx4nErtg4RgXQwV9SousWL8fE1Kl-UYbtEwMmOLYVV0uK_iIn8nMP0VMyTg6Um_WSRyjCE-5oNtuk4bcUuSiUMq7mXI0YW5KTS_MLE4VC">
+<div class="flex-grow">
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant">
+<div class="flex justify-between mb-2">
+<span class="text-xs font-black text-primary">ELENA RODRIGUEZ</span>
+<span class="text-[10px] font-bold text-outline uppercase">45M AGO</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">This aligns perfectly with the regulatory shifts we're seeing in the EU. The semicircle of adoption is growing wider.</p>
+</div>
+<div class="flex gap-4 mt-3 ml-1">
+<button class="text-[10px] font-black text-outline hover:text-primary uppercase tracking-widest">Like</button>
+<button class="text-[10px] font-black text-outline hover:text-primary uppercase tracking-widest">Reply</button>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- Right Column: Engagement Panel -->
+<section class="md:col-span-3 space-y-6">
+<!-- Upcoming Events -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-outline-variant">
+<h3 class="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant mb-6 flex items-center justify-between">
+                        Upcoming Events
+                        <span class="text-primary text-[10px] font-black cursor-pointer hover:underline">VIEW ALL</span>
+</h3>
+<div class="space-y-6">
+<div class="group cursor-pointer">
+<div class="flex gap-4 mb-2">
+<div class="w-10 h-12 rounded bg-primary text-on-primary flex flex-col items-center justify-center flex-shrink-0">
+<span class="text-[9px] font-bold leading-none opacity-80 mb-1 uppercase">Oct</span>
+<span class="text-lg font-black leading-none">24</span>
+</div>
+<div>
+<h4 class="text-sm font-extrabold text-on-surface group-hover:text-primary transition-colors leading-tight">Global FinTech Summit 2024</h4>
+<p class="text-[11px] text-outline mt-1 font-medium">Virtual • 14:00 GMT</p>
+</div>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<div class="flex -space-x-1.5">
+<div class="w-5 h-5 rounded-full border-2 border-surface-container-lowest bg-surface-container"></div>
+<div class="w-5 h-5 rounded-full border-2 border-surface-container-lowest bg-surface-container-high"></div>
+<div class="w-5 h-5 rounded-full border-2 border-surface-container-lowest bg-surface-container-highest"></div>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant">+122 attending</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="flex gap-4 mb-2">
+<div class="w-10 h-12 rounded bg-surface-container text-on-surface flex flex-col items-center justify-center flex-shrink-0 border border-outline-variant">
+<span class="text-[9px] font-bold leading-none opacity-60 mb-1 uppercase">Nov</span>
+<span class="text-lg font-black leading-none">02</span>
+</div>
+<div>
+<h4 class="text-sm font-extrabold text-on-surface group-hover:text-primary transition-colors leading-tight">Agri-Tech Roundtable</h4>
+<p class="text-[11px] text-outline mt-1 font-medium">Hybrid • Nairobi</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- VCast Direct Messaging -->
+<div class="bg-primary-container text-on-primary-container rounded-xl overflow-hidden shadow-xl border border-primary">
+<div class="p-6">
+<h3 class="text-[11px] font-bold uppercase tracking-widest text-primary-fixed mb-6 flex items-center justify-between">
+                            Semicircle Direct
+                            <span class="material-symbols-outlined text-sm" data-icon="chat_bubble">chat_bubble</span>
+</h3>
+<div class="space-y-3">
+<div class="flex gap-3 items-center bg-white/5 p-3 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border border-white/5">
+<div class="relative">
+<img alt="Direct contact" class="w-10 h-10 rounded-full object-cover border border-white/20" data-alt="Corporate headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1LsDOGSTWMVjOzse7XN37RA7ooyihkEGvuimtehf5Pf02tiw5YGMetKWFmdWg6R3xDNYGAFe29vSOf7Ign2zMqF8oc0eq3Uj18RwvC5oTss1-6-7Y7p8GkUSzmZAcp8jULFEltQtmPgQnKFZkBxbdXBPIxIGU18zDJpacuST-3TDbrFGoPzxhJElNaBo99ECQLeRZo8GZ3_ZeCTpHEedjzDvCI1aMp1bNgCQViYoDM420pp62SXk0ZDVQ9purY_j6u40tXmui3gUu">
+<div class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-primary-fixed rounded-full border-2 border-primary-container"></div>
+</div>
+<div class="overflow-hidden">
+<h4 class="text-xs font-bold truncate uppercase tracking-wide">Marcus Thorne</h4>
+<p class="text-[10px] text-primary-fixed/70 truncate font-medium">Shared: 'Project_Alpha_Draft'</p>
+</div>
+</div>
+<div class="flex gap-3 items-center bg-white/5 p-3 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border border-white/5 opacity-60">
+<img alt="Direct contact" class="w-10 h-10 rounded-full object-cover border border-white/10" data-alt="Business professional" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8y6SZcVsCCfNsJuSZROPN80WJGelemncNqNECXTEy7sAGbEXv771mN64ybxRxl5LV6qxV3PwVboAJ-50-8eUcAbTVXWX9sZL6emhVLMuLIsouK0OCC6cOL5lVIcTR35TBzmDbeD7PvyPkTydwZmYjdxHb_1LNr3hEDmyKu7j2-yO0abK-E7dPxq9E_8DPr3UDc_KcGGl0hdBBni6IySfisjzjnZqw7mLY2Z-cjk6iQok9Sn7hSycdc6L9p0QxHpO3yS35ShAlxtIo">
+<div class="overflow-hidden">
+<h4 class="text-xs font-bold truncate uppercase tracking-wide">David Miller</h4>
+<p class="text-[10px] text-primary-fixed/70 truncate font-medium">Great session today! Let's...</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-6 py-3 bg-primary-fixed text-on-primary-fixed font-black rounded-xl text-[10px] tracking-widest uppercase transition-transform active:scale-95 shadow-lg shadow-primary-fixed/10">
+                            Open Inbox
+                        </button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Mobile Navigation Bar -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-surface/90 backdrop-blur-xl border-t border-outline-variant flex justify-around items-center px-4 z-50">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" data-icon="dashboard" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="text-[10px] font-black uppercase">Feed</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-outline">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="text-[10px] font-bold uppercase">Explore</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-outline">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+<span class="text-[10px] font-bold uppercase">Inbox</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-outline">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-bold uppercase">Profile</span>
+</button>
+</nav>
+<!-- Floating Action Button -->
+<button class="fixed bottom-24 right-6 md:bottom-10 md:right-10 w-14 h-14 bg-primary text-on-primary rounded-xl shadow-2xl flex items-center justify-center z-40 hover:scale-105 transition-transform active:scale-95">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</body></html>
