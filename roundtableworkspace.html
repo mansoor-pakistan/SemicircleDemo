@@ -1,0 +1,432 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#003527",
+                    "on-primary": "#ffffff",
+                    "primary-fixed-dim": "#95d3ba",
+                    "on-primary-fixed-variant": "#0b513d",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#003623",
+                    "on-background": "#191c1e",
+                    "on-surface": "#191c1e",
+                    "tertiary-fixed": "#6ffbbe",
+                    "inverse-surface": "#2d3133",
+                    "on-secondary-fixed-variant": "#3a485c",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#eff1f3",
+                    "outline": "#707974",
+                    "on-tertiary-container": "#31c98f",
+                    "surface-tint": "#2b6954",
+                    "on-primary-fixed": "#002117",
+                    "on-tertiary-fixed": "#002113",
+                    "surface": "#f7f9fb",
+                    "outline-variant": "#bfc9c3",
+                    "on-primary-container": "#80bea6",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f2f4f6",
+                    "tertiary-fixed-dim": "#4edea3",
+                    "secondary-container": "#d5e3fd",
+                    "primary-fixed": "#b0f0d6",
+                    "on-surface-variant": "#404944",
+                    "surface-container": "#eceef0",
+                    "secondary-fixed": "#d5e3fd",
+                    "inverse-primary": "#95d3ba",
+                    "background": "#f7f9fb",
+                    "surface-bright": "#f7f9fb",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#d8dadc",
+                    "surface-container-highest": "#e0e3e5",
+                    "primary-container": "#064e3b",
+                    "on-tertiary-fixed-variant": "#005236",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#0d1c2f",
+                    "surface-container-high": "#e6e8ea",
+                    "tertiary-container": "#004f34",
+                    "secondary-fixed-dim": "#b9c7e0",
+                    "secondary": "#515f74",
+                    "surface-variant": "#e0e3e5",
+                    "on-secondary-container": "#57657b",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "120px",
+                    "gutter": "32px",
+                    "unit": "8px",
+                    "margin-page": "64px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-md": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "headline-md": ["Manrope"],
+                    "label-caps": ["Manrope"],
+                    "headline-lg": ["Manrope"],
+                    "display-xl": ["Manrope"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "display-xl": ["60px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .arc-button {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            border-top-right-radius: 9999px;
+            border-bottom-right-radius: 9999px;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 32px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 h-16 bg-white border-b border-slate-200 shadow-sm font-manrope antialiased tracking-tight">
+<div class="flex items-center gap-8">
+<span class="text-xl font-extrabold tracking-tighter text-emerald-900 uppercase">The Roundtable</span>
+<nav class="hidden md:flex gap-6 items-center h-full">
+<a class="text-slate-500 hover:text-emerald-800 font-semibold text-sm" href="#">Insights</a>
+<a class="text-slate-500 hover:text-emerald-800 font-semibold text-sm" href="#">Network</a>
+<a class="text-emerald-900 font-bold border-b-2 border-emerald-900 text-sm py-5" href="#">Roundtables</a>
+<a class="text-slate-500 hover:text-emerald-800 font-semibold text-sm" href="#">Briefings</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-full transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-full transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="h-8 w-8 rounded-full overflow-hidden border border-slate-200">
+<img alt="Executive Profile" data-alt="Close up portrait of a professional business executive in a dark suit with a clean neutral office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGKYGIEoWW1Myh4eC_74f2nzu-5GCDMU-yF0HfOAwJ-WIrXIOJNcfA3Sg7NNrssRNX0wns9fd498LMTypaL6JSwpfP9HhNRNmXMOBFKAw7KJ2yfoijtllnkClp4eh7psp3aF5i07upFAF6raOxuUnom8xt2-hCCuD9UySSt3Vc3JjHxQPUkTzg9gzCpanwA1gW3EYSxYgeKMTmgDzEge8pOp_LI4CNn_XQRPXaSHknED0tNoHyGNe7iSK5ggliVInUIrVnSyg5yh9Z">
+</div>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-16 h-[calc(100vh-64px)] w-72 bg-slate-50 border-r border-slate-200 flex flex-col py-6 z-40">
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3 mb-1">
+<div class="h-8 w-8 bg-primary rounded flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined">corporate_fare</span>
+</div>
+<span class="text-lg font-bold text-emerald-900">B2B Community</span>
+</div>
+<span class="text-xs font-semibold text-slate-500 uppercase tracking-widest">Premier Workspace</span>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="bg-emerald-50 text-emerald-900 border-r-4 border-emerald-900 p-4 flex items-center gap-3 font-semibold text-sm transition-all duration-300" href="#">
+<span class="material-symbols-outlined">badge</span>
+<span>Host Management</span>
+</a>
+<a class="text-slate-600 hover:bg-emerald-50/50 hover:text-emerald-900 p-4 flex items-center gap-3 font-semibold text-sm transition-all duration-300" href="#">
+<span class="material-symbols-outlined">forum</span>
+<span>Discussion Threads</span>
+</a>
+<a class="text-slate-600 hover:bg-emerald-50/50 hover:text-emerald-900 p-4 flex items-center gap-3 font-semibold text-sm transition-all duration-300" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span>Member Directory</span>
+</a>
+<a class="text-slate-600 hover:bg-emerald-50/50 hover:text-emerald-900 p-4 flex items-center gap-3 font-semibold text-sm transition-all duration-300" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span>Executive Board</span>
+</a>
+</nav>
+<div class="px-4 mt-auto">
+<button class="w-full bg-primary text-on-primary py-3 px-4 arc-button font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-900/10 hover:translate-y-[-2px] active:scale-95 transition-all">
+<span class="material-symbols-outlined">add</span>
+<span>Post New Question</span>
+</button>
+<div class="mt-6 pt-6 border-t border-slate-200">
+<a class="text-slate-600 p-3 flex items-center gap-3 font-semibold text-sm hover:text-emerald-900" href="#">
+<span class="material-symbols-outlined">help</span>
+<span>Support</span>
+</a>
+<a class="text-slate-600 p-3 flex items-center gap-3 font-semibold text-sm hover:text-emerald-900" href="#">
+<span class="material-symbols-outlined">history</span>
+<span>Archive</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-72 mt-16 p-margin-page">
+<div class="max-w-container-max mx-auto">
+<!-- Hero Header -->
+<section class="mb-12">
+<div class="flex items-center gap-2 mb-4">
+<span class="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-emerald-200">Active Roundtable Topic</span>
+<span class="text-slate-400 text-xs font-medium">• Session #842</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary mb-6 max-w-4xl">
+                    The Decentralization of Enterprise Architecture: Risk vs. Agility
+                </h1>
+<div class="editorial-grid">
+<div class="col-span-8">
+<p class="font-body-lg text-body-lg text-slate-600 leading-relaxed border-l-2 border-emerald-900 pl-6">
+                            As organizations pivot toward autonomous squads, the traditional monolithic architect role is fracturing. This roundtable explores whether the gains in delivery velocity outweigh the long-term technical debt and security fragmentation introduced by localized decision-making.
+                        </p>
+</div>
+<div class="col-span-4 flex flex-col justify-end items-end">
+<div class="text-right">
+<p class="text-slate-400 font-label-caps uppercase mb-1">Host Authority</p>
+<p class="font-bold text-primary">Marcus Thorne, CTO at Axiom Systems</p>
+</div>
+</div>
+</div>
+</section>
+<div class="editorial-grid items-start">
+<!-- Main Workspace Area -->
+<div class="col-span-8 space-y-8">
+<!-- Discussion Builder Card -->
+<div class="bg-white border border-slate-200 rounded-lg p-8 shadow-sm">
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-slate-100">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary leading-none">Discussion Builder</h2>
+<p class="text-slate-500 mt-2">Construct the narrative flow for today's session</p>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 arc-button font-bold text-sm flex items-center gap-2 hover:bg-emerald-950 transition-colors">
+<span class="material-symbols-outlined text-sm">publish</span>
+                                Launch Thread
+                            </button>
+</div>
+<div class="space-y-6">
+<!-- Question Item: Open-Ended -->
+<div class="p-6 bg-slate-50 rounded-lg border border-slate-200 group relative">
+<div class="flex justify-between mb-4">
+<span class="text-[10px] font-bold uppercase tracking-widest text-emerald-700 bg-emerald-50 px-2 py-1 rounded">Open-Ended (Rich Text)</span>
+<button class="text-slate-300 hover:text-error transition-colors"><span class="material-symbols-outlined">delete</span></button>
+</div>
+<label class="block text-sm font-bold text-primary mb-2">Primary Thesis Question</label>
+<input class="w-full bg-transparent border-0 border-b border-slate-300 focus:border-emerald-900 focus:ring-0 font-body-md text-primary px-0 py-2 placeholder-slate-400 transition-all" type="text" value="How has your organization balanced squad autonomy with global security standards in the last 12 months?">
+<div class="mt-4 flex gap-4">
+<button class="text-xs font-bold text-slate-500 flex items-center gap-1 hover:text-emerald-900 transition-colors">
+<span class="material-symbols-outlined text-sm">attachment</span> Add Contextual PDF
+                                    </button>
+<button class="text-xs font-bold text-slate-500 flex items-center gap-1 hover:text-emerald-900 transition-colors">
+<span class="material-symbols-outlined text-sm">image</span> Add Chart
+                                    </button>
+</div>
+</div>
+<!-- Question Item: Closed-Ended -->
+<div class="p-6 bg-slate-50 rounded-lg border border-slate-200 group relative">
+<div class="flex justify-between mb-4">
+<span class="text-[10px] font-bold uppercase tracking-widest text-emerald-700 bg-emerald-50 px-2 py-1 rounded">Closed-Ended (Multiple Choice)</span>
+<button class="text-slate-300 hover:text-error transition-colors"><span class="material-symbols-outlined">delete</span></button>
+</div>
+<label class="block text-sm font-bold text-primary mb-2">Sentiment Assessment</label>
+<input class="w-full bg-transparent border-0 border-b border-slate-300 focus:border-emerald-900 focus:ring-0 font-body-md text-primary px-0 py-2 mb-4 transition-all" type="text" value="Rate the current state of architectural alignment across your business units:">
+<div class="space-y-2">
+<div class="flex items-center gap-3">
+<div class="w-4 h-4 rounded-full border-2 border-emerald-900"></div>
+<input class="text-sm bg-white border border-slate-200 px-3 py-1 rounded w-full" type="text" value="Highly Fragmented (No Central Standards)">
+</div>
+<div class="flex items-center gap-3">
+<div class="w-4 h-4 rounded-full border-2 border-slate-300"></div>
+<input class="text-sm bg-white border border-slate-200 px-3 py-1 rounded w-full" type="text" value="Semi-Aligned (Guardrails in Place)">
+</div>
+<div class="flex items-center gap-3">
+<div class="w-4 h-4 rounded-full border-2 border-slate-300"></div>
+<input class="text-sm bg-white border border-slate-200 px-3 py-1 rounded w-full" type="text" value="Fully Unified (Central Approval Required)">
+</div>
+</div>
+</div>
+<button class="w-full border-2 border-dashed border-slate-200 py-4 rounded-lg text-slate-400 font-bold text-sm hover:border-emerald-300 hover:text-emerald-700 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">add_circle</span>
+                                Add Next Question Block
+                            </button>
+</div>
+</div>
+<!-- Thread Feed -->
+<div>
+<div class="flex items-center gap-4 mb-6">
+<h3 class="font-headline-md text-primary text-2xl">Active Thread History</h3>
+<div class="flex-1 h-px bg-slate-200"></div>
+</div>
+<div class="space-y-4">
+<!-- Thread Card 1 -->
+<div class="bg-white border border-slate-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-emerald-900 rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm">bolt</span>
+</div>
+<div>
+<h4 class="font-bold text-primary">Initial Reactions: The Cost of Speed</h4>
+<p class="text-xs text-slate-500">Started 2 hours ago • <span class="font-bold text-emerald-700 underline cursor-pointer">View Analysis</span></p>
+</div>
+</div>
+<div class="flex -space-x-2">
+<img alt="Member" class="w-8 h-8 rounded-full border-2 border-white" data-alt="Corporate headshot of a business woman with glasses in a professional studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1_BqO6aJ6bYdK1H84O4wTQufCUDhUIEBra0gJjOVa9vR3KVqOP5nGT1PWJp9YjhicCW8D7fG53SKUn0LZV3MqIGGyPaY5sMx1Ho4oxPi52uZplbLcPBBEgUtCoX1vxuK44ePMLpUPn8N9j4TBGQExoOT61WX5laRVSHXdScsqUSDUdOfkXrlpG61XRXWtFrWdsNhCA_y093owXqaWXaj-HCX-tQ2QevzwjMgA6ioFS4CejO7CmpRs2HDGHSY-o3e47J9SBuCq-iSp">
+<img alt="Member" class="w-8 h-8 rounded-full border-2 border-white" data-alt="Corporate headshot of a senior executive male with silver hair in a well-lit modern office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOklYYu1SlhKJ0-TzbiPXiUCDTIwVzHwg9DRn3lPtKhSZ15sN3QKVAJH8k2gogD_s2fwVDWw6T5dnKYDU1ZGBTcQ6CiQHggb_Ab2IXLniRKShjbr1hA_weRGAtwzP8lcxt1hleDWsL0WPu1xBoy1dAyKlq9fxaJvt080stLCixtoM3HyrsScXwMsvLCQ9CKw0ZIrS2BwjKS266kRk92PGeoCT3dTvXlhBdqIA_7pNrTaexbZpHLzo6uf9Q_EzFeIhwXBW_5tR4hx6I">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-[10px] font-bold">+14</div>
+</div>
+</div>
+<div class="flex items-center gap-6 text-sm">
+<div class="flex items-center gap-1.5 text-slate-600">
+<span class="material-symbols-outlined text-lg">chat_bubble_outline</span>
+<span class="font-semibold">42 Replies</span>
+</div>
+<div class="flex items-center gap-1.5 text-slate-600">
+<span class="material-symbols-outlined text-lg">analytics</span>
+<span class="font-semibold">88% Engagement</span>
+</div>
+<div class="ml-auto flex items-center gap-2">
+<span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+<span class="text-xs font-bold text-emerald-900 uppercase">Live Now</span>
+</div>
+</div>
+</div>
+<!-- Thread Card 2 -->
+<div class="bg-white border border-slate-200 rounded-lg p-6 opacity-80">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center text-slate-600">
+<span class="material-symbols-outlined text-sm">inventory</span>
+</div>
+<div>
+<h4 class="font-bold text-primary">Archive: Tooling Standard Selection</h4>
+<p class="text-xs text-slate-500">Completed yesterday • <span class="font-bold text-emerald-700 underline cursor-pointer">Download Summary</span></p>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-6 text-sm">
+<div class="flex items-center gap-1.5 text-slate-400">
+<span class="material-symbols-outlined text-lg">chat_bubble_outline</span>
+<span class="font-semibold">124 Replies</span>
+</div>
+<div class="flex items-center gap-1.5 text-slate-400">
+<span class="material-symbols-outlined text-lg">done_all</span>
+<span class="font-semibold">Closed</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Participant Sidebar -->
+<aside class="col-span-4 space-y-6 sticky top-24">
+<!-- Session Stats -->
+<div class="bg-emerald-900 text-on-primary rounded-lg p-6 shadow-xl">
+<p class="text-xs font-bold uppercase tracking-widest opacity-60 mb-4">Live Session Metrics</p>
+<div class="flex items-end justify-between">
+<div>
+<span class="text-4xl font-extrabold">24</span>
+<span class="text-emerald-300 ml-1">/ 30</span>
+<p class="text-xs font-medium mt-1">Verified Participants</p>
+</div>
+<div class="w-16 h-16 flex items-center justify-center relative">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-emerald-800" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-width="4"></circle>
+<circle class="text-white" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-dasharray="175" stroke-dashoffset="35" stroke-width="4"></circle>
+</svg>
+<span class="absolute text-[10px] font-bold">80%</span>
+</div>
+</div>
+</div>
+<!-- Participant List -->
+<div class="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm">
+<div class="bg-slate-50 border-b border-slate-200 px-6 py-4 flex justify-between items-center">
+<h3 class="font-bold text-primary text-sm uppercase tracking-wider">Vetted Members</h3>
+<span class="bg-emerald-200 text-emerald-900 px-2 py-0.5 rounded text-[10px] font-extrabold">ONLINE</span>
+</div>
+<div class="divide-y divide-slate-100 max-h-[500px] overflow-y-auto">
+<!-- Member 1 -->
+<div class="px-6 py-4 flex items-center justify-between group cursor-pointer hover:bg-slate-50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img alt="Member" class="w-10 h-10 rounded-full" data-alt="Portrait of a female technology leader with a confident expression and professional attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6QL-p8AY6cvHcUTZiLc9j1gE9ds1o9HJMUQ6-IZDvbBuY1iS0MY8hnPMWe_Qg8pX6_jsyULB8vLqyKttYJ355FYD26bRWlFddLtAFEo_vsejxZOitlZJWc8hyiWwqOKAQCr1CcdHWHQRE0Y5wos88MBUbrO-rMeRG5VqPpaEY2j8WujFZW2uGa0-WLH8AmgNkySqyhiKopE74mabVpKta9OSDmrY5S8jagdppmKFSP2A1XLJTi2mrdQMeKW5nzMbPRMFm5vEh0A5b">
+<div class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-white rounded-full"></div>
+</div>
+<div>
+<p class="text-sm font-bold text-primary">Elena Soros</p>
+<p class="text-[10px] text-slate-500 font-medium">Head of Infrastructure, FinCorp</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-emerald-900 transition-colors">more_vert</span>
+</div>
+<!-- Member 2 -->
+<div class="px-6 py-4 flex items-center justify-between group cursor-pointer hover:bg-slate-50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img alt="Member" class="w-10 h-10 rounded-full" data-alt="Portrait of an experienced male executive in business casual wear, smiling slightly in a modern workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD56m4QKWKQA2GOmN0G6Q3qLz8OzJSh00RnwdvZSTY8h8KuE8mp_L-SnU6MC6T6_9unehEGMfw3Es2QZc0zKcfMfYWLCV8wQyzfm0G3HOIQ5V5BzSsBYKd7FyMsiL617iqhqeRynEO3A1oy3fFbTCVb3hZBlL10KFk_EgZAnys-1pbTzVeGDabDXACkXrz-2bcbEuFQ0zxQOmmGTEKQYGtTzEupigN8JBPhTEDHn8UMbQNRmttJH2CJqL11bjU96aRkC3AC7lFLKsdw">
+<div class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-white rounded-full"></div>
+</div>
+<div>
+<p class="text-sm font-bold text-primary">Julian Drake</p>
+<p class="text-[10px] text-slate-500 font-medium">VP Architecture, RetailNext</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-emerald-900 transition-colors">more_vert</span>
+</div>
+<!-- Member 3 -->
+<div class="px-6 py-4 flex items-center justify-between group cursor-pointer hover:bg-slate-50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img alt="Member" class="w-10 h-10 rounded-full" data-alt="Headshot of a professional man with a neutral background, wearing a smart charcoal blazer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGn9xArwViAwF4MCEZnXEkXeDcjOBmM4ye25hj--2-lREhTb_pMWdN9L1gD2gWEpt9YaILlyf42fVrSsW9_lZGrzrkszxTmLifkZXV8JWtVTjoV4lnw8CNBZbpgcPxlIyZepyBjs5qm3xi_aL_FXEBq_Y_7g3_VRsLgfhr8ytCxNbYYwV9LrNYnEjePP0nwuD5mXzD6Fs6qexbGtBcRVZ5D6xLSRjnDExFywxq3mLOnfNb95Hh99H0gtUEp7THKuKrwQthcl2VCcRq">
+<div class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-white rounded-full"></div>
+</div>
+<div>
+<p class="text-sm font-bold text-primary">Miriam Kaine</p>
+<p class="text-[10px] text-slate-500 font-medium">SVP Operations, LogisTech</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-emerald-900 transition-colors">more_vert</span>
+</div>
+</div>
+<div class="p-4 bg-slate-50 border-t border-slate-200">
+<button class="w-full text-xs font-bold text-emerald-900 hover:underline flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm">groups</span>
+                                Manage All 24 Members
+                            </button>
+</div>
+</div>
+<!-- Invitation Chips -->
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center gap-1 bg-emerald-50 text-emerald-900 px-3 py-1 rounded-full text-[10px] font-bold border border-emerald-100">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+                            VERIFIED ACCESS
+                        </span>
+<span class="inline-flex items-center gap-1 bg-slate-100 text-slate-600 px-3 py-1 rounded-full text-[10px] font-bold border border-slate-200">
+                            EXCLUSIVE HOST
+                        </span>
+</div>
+</aside>
+</div>
+</div>
+</main>
+<!-- Contextual FAB (Only for Roundtables Management) -->
+<button class="fixed bottom-8 right-8 bg-emerald-900 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center hover:scale-105 active:scale-95 transition-all z-50">
+<span class="material-symbols-outlined text-2xl">question_answer</span>
+</button>
+</body></html>
