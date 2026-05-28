@@ -1,0 +1,473 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>The Arc Network | Executive Directory</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#eff1f3",
+                    "tertiary-fixed": "#6ffbbe",
+                    "inverse-surface": "#2d3133",
+                    "on-secondary-fixed-variant": "#3a485c",
+                    "on-background": "#191c1e",
+                    "tertiary": "#003623",
+                    "on-surface": "#191c1e",
+                    "primary": "#003527",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#95d3ba",
+                    "on-primary-fixed-variant": "#0b513d",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#80bea6",
+                    "surface-container-low": "#f2f4f6",
+                    "surface": "#f7f9fb",
+                    "outline-variant": "#bfc9c3",
+                    "on-primary-fixed": "#002117",
+                    "on-tertiary-fixed": "#002113",
+                    "outline": "#707974",
+                    "on-tertiary-container": "#31c98f",
+                    "surface-tint": "#2b6954",
+                    "surface-dim": "#d8dadc",
+                    "surface-container-highest": "#e0e3e5",
+                    "surface-bright": "#f7f9fb",
+                    "error-container": "#ffdad6",
+                    "inverse-primary": "#95d3ba",
+                    "background": "#f7f9fb",
+                    "surface-container": "#eceef0",
+                    "on-surface-variant": "#404944",
+                    "secondary-fixed": "#d5e3fd",
+                    "tertiary-fixed-dim": "#4edea3",
+                    "primary-fixed": "#b0f0d6",
+                    "secondary-container": "#d5e3fd",
+                    "on-secondary-container": "#57657b",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#004f34",
+                    "secondary-fixed-dim": "#b9c7e0",
+                    "surface-variant": "#e0e3e5",
+                    "secondary": "#515f74",
+                    "on-secondary-fixed": "#0d1c2f",
+                    "surface-container-high": "#e6e8ea",
+                    "primary-container": "#064e3b",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#005236"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "120px",
+                    "unit": "8px",
+                    "margin-page": "64px",
+                    "gutter": "32px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-md": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "headline-md": ["Manrope"],
+                    "label-caps": ["Manrope"],
+                    "headline-lg": ["Manrope"],
+                    "display-xl": ["Manrope"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "display-xl": ["60px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .arc-button {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 9999px;
+            border-bottom-right-radius: 9999px;
+        }
+        .editorial-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 20px 25px -5px rgba(0, 53, 39, 0.03);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #064e3b;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-8 h-16 bg-white/80 backdrop-blur-md border-b border-slate-200">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tighter text-emerald-900">The Arc Network</span>
+<nav class="hidden md:flex items-center gap-6 font-manrope text-sm font-semibold tracking-tight">
+<a class="text-slate-500 hover:text-emerald-800 transition-colors" href="#">Insights</a>
+<a class="text-emerald-900 border-b-2 border-emerald-900 pb-1" href="#">All Members</a>
+<a class="text-slate-500 hover:text-emerald-800 transition-colors" href="#">Committees</a>
+<a class="text-slate-500 hover:text-emerald-800 transition-colors" href="#">Briefings</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden lg:block">
+<input class="bg-slate-100 border-none rounded-full px-4 py-1.5 text-sm w-64 focus:ring-1 focus:ring-primary" placeholder="Search members..." type="text">
+<span class="material-symbols-outlined absolute right-3 top-1.5 text-slate-400 text-lg">search</span>
+</div>
+<button class="p-2 text-emerald-900 hover:bg-slate-50 rounded-full transition-all">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-emerald-900 hover:bg-slate-50 rounded-full transition-all">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-emerald-100">
+<img class="w-full h-full object-cover" data-alt="Portrait of a professional executive man in a dark tailored suit with a confident expression and neutral office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsk9Qyyzl5ATg6BXdwNJ2wsnVDTEDmM4yLYB4IaoFdaBsuH0F-sfTNqojN4Jliq8--xyYwcMyfEb9qIgHQY8MgAOMEVXNp4f1b4opMqA8Q8SlCB1fxoij5-7gicPs7sv4fgVDu-gYoGd8DJmTF0DZ-8SvSNPXruNDjZjyRR9lz8S8O9jbcqaT0VGM4Gn0iWTPIdW9O08-wt3EkjvEL7Ff9m-LnpvgQpPozZdshNiftz_9kJCmBB3QK2Zfnc4_LNTEmzps6trQt4Cgo">
+</div>
+</div>
+</header>
+<!-- Sidebar Navigation -->
+<aside class="fixed left-0 top-16 h-[calc(100vh-64px)] w-64 flex flex-col py-8 bg-slate-50 border-r border-slate-200 hidden lg:flex">
+<div class="px-6 mb-8">
+<h3 class="font-manrope text-xs font-bold uppercase tracking-widest text-emerald-900">Industry Focus</h3>
+<p class="text-[10px] text-slate-500 font-medium">Executive Directory</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 bg-emerald-50 text-emerald-900 rounded-r-full py-3 px-6 border-l-4 border-emerald-900 font-manrope text-xs font-bold uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined text-lg">group</span>
+                All Members
+            </a>
+<a class="flex items-center gap-3 text-slate-600 py-3 px-6 hover:text-emerald-800 hover:bg-slate-100 transition-all font-manrope text-xs font-bold uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined text-lg">terminal</span>
+                Technology
+            </a>
+<a class="flex items-center gap-3 text-slate-600 py-3 px-6 hover:text-emerald-800 hover:bg-slate-100 transition-all font-manrope text-xs font-bold uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined text-lg">payments</span>
+                Finance
+            </a>
+<a class="flex items-center gap-3 text-slate-600 py-3 px-6 hover:text-emerald-800 hover:bg-slate-100 transition-all font-manrope text-xs font-bold uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined text-lg">monitor_heart</span>
+                Healthcare
+            </a>
+<a class="flex items-center gap-3 text-slate-600 py-3 px-6 hover:text-emerald-800 hover:bg-slate-100 transition-all font-manrope text-xs font-bold uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined text-lg">factory</span>
+                Manufacturing
+            </a>
+<a class="flex items-center gap-3 text-slate-600 py-3 px-6 hover:text-emerald-800 hover:bg-slate-100 transition-all font-manrope text-xs font-bold uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined text-lg">bolt</span>
+                Energy
+            </a>
+</nav>
+<div class="px-6 mt-8 space-y-6">
+<div>
+<h4 class="text-[10px] font-bold uppercase text-slate-400 mb-3 tracking-wider">Top Interests</h4>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">#FinTech</span>
+<span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">#AI</span>
+<span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">#ESG</span>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary arc-button py-3 px-4 font-manrope text-xs font-bold uppercase tracking-widest text-left shadow-lg">
+                Request Invitation
+            </button>
+</div>
+<div class="mt-auto px-6 py-4 flex gap-4 border-t border-slate-200">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">help</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">shield_person</span>
+</a>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="lg:ml-64 min-h-screen">
+<!-- Hero Section -->
+<section class="px-8 pt-12 pb-16 bg-white border-b border-slate-100">
+<div class="max-w-5xl">
+<span class="inline-flex items-center px-3 py-1 bg-emerald-50 text-emerald-900 text-label-caps rounded-full mb-6">
+<span class="material-symbols-outlined text-sm mr-2" style="font-variation-settings: 'FILL' 1;">verified</span>
+                    Vetted Executive Network
+                </span>
+<h1 class="font-display-xl text-display-xl text-primary mb-6">The Semicircle Network</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl leading-relaxed">
+                    Connect with high-caliber leaders who shape the trajectory of global commerce. A vetted perspective is the primary differentiator in an era of saturated information.
+                </p>
+</div>
+</section>
+<!-- Arc Builders Spotlight -->
+<section class="px-8 py-12">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary">Arc Builders</h2>
+<p class="text-slate-500 font-medium">Foundational members shaping the network's future</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 border border-slate-200 rounded-full hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="p-2 border border-slate-200 rounded-full hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="flex gap-6 overflow-x-auto pb-6 custom-scrollbar snap-x">
+<!-- Profile 1 -->
+<div class="min-w-[400px] bg-primary text-on-primary p-8 rounded-xl relative overflow-hidden snap-start editorial-shadow">
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-6">
+<div class="w-20 h-20 rounded-full overflow-hidden border-2 border-emerald-400">
+<img class="w-full h-full object-cover" data-alt="Sophisticated woman executive with short dark hair, wearing a navy blazer, smiling confidently in a modern bright office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg250tDDDctPy-vOPSKJrWXbUcRIss7YQLSUXmMwGuuPc0iIHSy8bxjqQork9DNLwP54VxOW2AOe8JTaNervbTZ3S_s2ZjJ2Lgh_YcgUlH9gKS7Qxs3iF8DS7gVayXkEvPDKkZo5vneiWH80-qpkwHxDFCCHiYDP5JjCIXY1Y6Usm9lCtlicOIeMt1ZUHJk59SJM0IReccou2Qzw-ZG5iSa_xs8UcpmwHSANjKs60eigwWYoyYyQZ1fgOmClwSVi5mIC3qLmJDP6SI">
+</div>
+<span class="px-3 py-1 bg-emerald-800 text-emerald-300 text-[10px] font-bold uppercase tracking-widest rounded-full">Arc Builder</span>
+</div>
+<h3 class="font-headline-md text-2xl mb-1">Zainab Malik</h3>
+<p class="text-emerald-400 text-sm font-semibold mb-6 uppercase tracking-wider">Chief Technology Officer, Global Dynamics</p>
+<p class="font-serif italic text-lg leading-relaxed text-emerald-50">
+                            "Innovation isn't just about speed; it's about the precision of the arc—knowing exactly where to land."
+                        </p>
+</div>
+<div class="absolute -right-10 -bottom-10 w-40 h-40 border-[20px] border-emerald-900/50 rounded-full"></div>
+</div>
+<!-- Profile 2 -->
+<div class="min-w-[400px] bg-white border border-slate-200 p-8 rounded-xl relative overflow-hidden snap-start editorial-shadow">
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-6">
+<div class="w-20 h-20 rounded-full overflow-hidden border-2 border-emerald-900">
+<img class="w-full h-full object-cover" data-alt="Middle-aged male executive with glasses and graying hair, wearing a charcoal suit, looking thoughtfully into the distance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRtywR9PRwOfC3ImZAvF2u051U-KGdAvnB38SqnDhqoyGU-kVsSkxxDPlLhlcjaqCLZYwbPUwqq3en9KBIx2sQk6c9cLutP7kTxb222liW7IQgXma4bge_-9sUD_u5daEtwkU-Qm6AcQaqXakOk-_7yjcHiCCrFPfDlB0JWUX0oWWwPBL9BnZyP6TAqa-Qxc3SPLY2J0ZPpBKvR4fOMZgryV5jvyXHB5c6jfqrHNsSMSsBO5e6sV4dz20h2irXQ8E0qO1WHTJd6URb">
+</div>
+<span class="px-3 py-1 bg-slate-100 text-emerald-900 text-[10px] font-bold uppercase tracking-widest rounded-full">Arc Builder</span>
+</div>
+<h3 class="font-headline-md text-2xl text-primary mb-1">Dr. Arshad Mehmood</h3>
+<p class="text-emerald-900 text-sm font-semibold mb-6 uppercase tracking-wider">Head of Research, Biogen Core</p>
+<p class="font-serif italic text-lg leading-relaxed text-secondary">
+                            "The network allows us to synchronize across industries that traditionally never speak the same language."
+                        </p>
+</div>
+<div class="absolute -right-10 -top-10 w-32 h-32 bg-emerald-50 rounded-full opacity-50"></div>
+</div>
+<!-- Profile 3 -->
+<div class="min-w-[400px] bg-slate-900 text-white p-8 rounded-xl relative overflow-hidden snap-start editorial-shadow">
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-6">
+<div class="w-20 h-20 rounded-full overflow-hidden border-2 border-emerald-500">
+<img class="w-full h-full object-cover" data-alt="Dynamic woman of color executive in a professional professional cream blouse against a minimalist grey architectural background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARZwqrNQJ9vZX3F22S-mWfNacem4bXvkOP5GV3BECaDOR1veOD1MUxQMQMIs6fOjm2GK26LQ7-l97EgawicJOQbrt8ymWZLDyxlPewWlDXg_rzW2jFqZnuEw_stmZAJqGioczVqtvlnDU6UU55in1plQ2JwK3mKX4iKjQXXULFcjOnbdza8_17tnLDxzkgUpZor6klyvR3u3uOD_sHHrBGKVPnRpDwl8QuWS0M_9zflVBaDGb00nryxb1CSpzm9OOzeLg1aj07BVOL">
+</div>
+<span class="px-3 py-1 bg-emerald-900 text-emerald-400 text-[10px] font-bold uppercase tracking-widest rounded-full">Arc Builder</span>
+</div>
+<h3 class="font-headline-md text-2xl mb-1">Sobia Khan</h3>
+<p class="text-emerald-500 text-sm font-semibold mb-6 uppercase tracking-wider">VP of Strategy, Apex Ventures</p>
+<p class="font-serif italic text-lg leading-relaxed text-slate-300">
+                            "Capital follows clarity. The Semicircle is the most efficient filter for clarity in today's market."
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Member Directory -->
+<section class="px-8 pb-24">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
+<h2 class="font-headline-md text-headline-md text-primary">Member Directory</h2>
+<div class="flex items-center gap-4">
+<div class="flex items-center bg-white border border-slate-200 rounded-lg p-1">
+<button class="p-2 bg-slate-50 text-primary rounded shadow-sm">
+<span class="material-symbols-outlined">grid_view</span>
+</button>
+<button class="p-2 text-slate-400">
+<span class="material-symbols-outlined">format_list_bulleted</span>
+</button>
+</div>
+<select class="bg-white border-slate-200 rounded-lg text-sm font-bold text-slate-600 focus:ring-primary focus:border-primary">
+<option>Recently Active</option>
+<option>Newest Members</option>
+<option>Alphabetical</option>
+</select>
+</div>
+</div>
+<!-- Member Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+<!-- Member Card 1 -->
+<div class="bg-white border border-slate-100 rounded-xl overflow-hidden hover:border-emerald-200 transition-all duration-300 editorial-shadow group">
+<div class="p-8">
+<div class="flex items-start justify-between mb-6">
+<div class="w-24 h-24 rounded-2xl overflow-hidden grayscale group-hover:grayscale-0 transition-all">
+<img class="w-full h-full object-cover" data-alt="Headshot of a middle-aged male executive with a warm smile, wearing a professional open-collar shirt in a bright airy studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKrvHiLaPsrkOYb2dekxj4BUctbVMDSqzGvQmjGD9xjDMn0UBByWbwDyV2EOQTaN_LFs3UuwaozEbrZvR3vyauTutNwpYwpEK64jjYWRCJPoO3EpdassaWfBNhz2aeP_1dvw6ua-rIdEHrZbattQz-yLg8dnCdMg4PIGogvRoKOWVVF2nUyEeL2-3T8vtqEDXyB1o1qaHv0IQZQisbWlPxRbFYqyxRDy38IQTMefKtNMDaXK7J-hJNKzjjlnzp-BODdq_G4g7ADmwH">
+</div>
+<div class="flex flex-col items-end">
+<button class="p-2 text-slate-400 hover:text-emerald-900 transition-colors">
+<span class="material-symbols-outlined">chat_bubble</span>
+</button>
+<span class="mt-4 px-2 py-0.5 bg-emerald-50 text-emerald-800 text-[10px] font-bold uppercase rounded">Verified</span>
+</div>
+</div>
+<h4 class="font-headline-md text-xl text-primary mb-1">Ahmed Rizvi</h4>
+<p class="text-secondary text-sm font-medium mb-1">Principal Partner</p>
+<p class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-6">Sterling &amp; Associates</p>
+<div class="space-y-4">
+<div>
+<p class="text-[10px] font-bold uppercase text-slate-400 mb-2 tracking-widest">Industry</p>
+<span class="px-3 py-1 bg-slate-50 text-slate-700 text-xs font-semibold rounded-full">Financial Services</span>
+</div>
+<div>
+<p class="text-[10px] font-bold uppercase text-slate-400 mb-2 tracking-widest">Interests</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-emerald-800 text-xs font-bold">#WealthMgmt</span>
+<span class="text-emerald-800 text-xs font-bold">#MacroEconomics</span>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full py-4 bg-slate-50 border-t border-slate-100 font-manrope text-xs font-bold uppercase tracking-widest text-primary hover:bg-primary hover:text-on-primary transition-all group-hover:bg-primary group-hover:text-on-primary">
+                        View Profile
+                    </button>
+</div>
+<!-- Member Card 2 -->
+<div class="bg-white border border-slate-100 rounded-xl overflow-hidden hover:border-emerald-200 transition-all duration-300 editorial-shadow group">
+<div class="p-8">
+<div class="flex items-start justify-between mb-6">
+<div class="w-24 h-24 rounded-2xl overflow-hidden grayscale group-hover:grayscale-0 transition-all">
+<img class="w-full h-full object-cover" data-alt="Confident woman leader with stylized hair, wearing professional designer glasses and a sharp blazer against a minimal background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzADLu2tVIC0KcwlHIY-R4-KuPXiSiDw_wtbt34yNMG-qYteGKLZdircic2d4qMdvxH9mKwNwOBxUuZu3bvoun9RfVKxOYdXnUhXdIbKT5CDEBN54qUkfr28QzT9SBSdJ1VGC51Y4jUMsH6Pb2i3Mm-u3_D-ce3IGLoQ09HXgwn4_xxfFxFHBcRxEa01g1Ca9ZcJ3-Ahhv554lhsgG_k1PUd6kUD5rcCxEu8NBShUS-ZGWtMHcINPfCiIWPoAJVAA74CktAJT-Mvzh">
+</div>
+<div class="flex flex-col items-end">
+<button class="p-2 text-slate-400 hover:text-emerald-900 transition-colors">
+<span class="material-symbols-outlined">chat_bubble</span>
+</button>
+<span class="mt-4 px-2 py-0.5 bg-emerald-50 text-emerald-800 text-[10px] font-bold uppercase rounded">Verified</span>
+</div>
+</div>
+<h4 class="font-headline-md text-xl text-primary mb-1">Fatima Hassan</h4>
+<p class="text-secondary text-sm font-medium mb-1">Director of Sustainability</p>
+<p class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-6">Veridian Energy</p>
+<div class="space-y-4">
+<div>
+<p class="text-[10px] font-bold uppercase text-slate-400 mb-2 tracking-widest">Industry</p>
+<span class="px-3 py-1 bg-slate-50 text-slate-700 text-xs font-semibold rounded-full">Energy</span>
+</div>
+<div>
+<p class="text-[10px] font-bold uppercase text-slate-400 mb-2 tracking-widest">Interests</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-emerald-800 text-xs font-bold">#SolarPolicy</span>
+<span class="text-emerald-800 text-xs font-bold">#Sustainability</span>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full py-4 bg-slate-50 border-t border-slate-100 font-manrope text-xs font-bold uppercase tracking-widest text-primary hover:bg-primary hover:text-on-primary transition-all group-hover:bg-primary group-hover:text-on-primary">
+                        View Profile
+                    </button>
+</div>
+<!-- Member Card 3 -->
+<div class="bg-white border border-slate-100 rounded-xl overflow-hidden hover:border-emerald-200 transition-all duration-300 editorial-shadow group">
+<div class="p-8">
+<div class="flex items-start justify-between mb-6">
+<div class="w-24 h-24 rounded-2xl overflow-hidden grayscale group-hover:grayscale-0 transition-all">
+<img class="w-full h-full object-cover" data-alt="Tall male professional in a modern navy suit and crisp white shirt, standing in a high-end corporate lobby" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2Blw0fQ-w3IhgDS3GBTNAhRPlW_vw5TUxxjd9zPCtnC-SQdRaq7HZMLXdh5PJeewko1IV66j5LQAONUKujAaEbX3u3o1Yj8m7ZkyC6Te6Da6_k9JMYbKcA5stc1u7qXGZ8wbMd7MlH9mz-xU7NEYfsYB8-Q_sbZhc3HDsFBeaoYnm1h2FHQWIFyA9SbvGLNI6lf8JgTP5NGpl2cyIyYaJTOxO4r3_42mcr-zUBawUUkpsff9Z7KxB0Gq4LBgRfQxCqnErmEFA1WsQ">
+</div>
+<div class="flex flex-col items-end">
+<button class="p-2 text-slate-400 hover:text-emerald-900 transition-colors">
+<span class="material-symbols-outlined">chat_bubble</span>
+</button>
+<span class="mt-4 px-2 py-0.5 bg-emerald-50 text-emerald-800 text-[10px] font-bold uppercase rounded">Verified</span>
+</div>
+</div>
+<h4 class="font-headline-md text-xl text-primary mb-1">Kamran Ahmed</h4>
+<p class="text-secondary text-sm font-medium mb-1">Head of Engineering</p>
+<p class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-6">Quantico Systems</p>
+<div class="space-y-4">
+<div>
+<p class="text-[10px] font-bold uppercase text-slate-400 mb-2 tracking-widest">Industry</p>
+<span class="px-3 py-1 bg-slate-50 text-slate-700 text-xs font-semibold rounded-full">Technology</span>
+</div>
+<div>
+<p class="text-[10px] font-bold uppercase text-slate-400 mb-2 tracking-widest">Interests</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-emerald-800 text-xs font-bold">#AIEthics</span>
+<span class="text-emerald-800 text-xs font-bold">#Robotics</span>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full py-4 bg-slate-50 border-t border-slate-100 font-manrope text-xs font-bold uppercase tracking-widest text-primary hover:bg-primary hover:text-on-primary transition-all group-hover:bg-primary group-hover:text-on-primary">
+                        View Profile
+                    </button>
+</div>
+<!-- Member Card 4 -->
+<div class="bg-white border border-slate-100 rounded-xl overflow-hidden hover:border-emerald-200 transition-all duration-300 editorial-shadow group">
+<div class="p-8">
+<div class="flex items-start justify-between mb-6">
+<div class="w-24 h-24 rounded-2xl overflow-hidden grayscale group-hover:grayscale-0 transition-all">
+<img class="w-full h-full object-cover" data-alt="Portrait of a black female executive with a friendly professional look, wearing a stylish olive green dress in a bright creative studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo3CTsxGlpU8N7cS_GQWVsX62dhJRI6kixcHTEKjinON8zAkLRtj1AulwssThWWl8dcr3EDN_7iY5k_6D34ZB8T3vtdXtGcUS0U-nWbwW009T6psFhjByMzD-rFPloEVcZMTeRqVHjEdPrsKiT-B2rfYyJycsc-cKkHzPPSaBgT-gFKnGQaFbRHlImT-IjnEb2zvKRTubnF6wzWxaNL1TIrVqBCb0hX3j2iczZjMLlcr3Im3N7p96DmtOkIRVVR43t2JixYq5BRK_D">
+</div>
+<div class="flex flex-col items-end">
+<button class="p-2 text-slate-400 hover:text-emerald-900 transition-colors">
+<span class="material-symbols-outlined">chat_bubble</span>
+</button>
+<span class="mt-4 px-2 py-0.5 bg-emerald-50 text-emerald-800 text-[10px] font-bold uppercase rounded">Verified</span>
+</div>
+</div>
+<h4 class="font-headline-md text-xl text-primary mb-1">Aisha Qureshi</h4>
+<p class="text-secondary text-sm font-medium mb-1">Chief Operations Officer</p>
+<p class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-6">Pulse Healthcare</p>
+<div class="space-y-4">
+<div>
+<p class="text-[10px] font-bold uppercase text-slate-400 mb-2 tracking-widest">Industry</p>
+<span class="px-3 py-1 bg-slate-50 text-slate-700 text-xs font-semibold rounded-full">Healthcare</span>
+</div>
+<div>
+<p class="text-[10px] font-bold uppercase text-slate-400 mb-2 tracking-widest">Interests</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-emerald-800 text-xs font-bold">#Telemedicine</span>
+<span class="text-emerald-800 text-xs font-bold">#PatientData</span>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full py-4 bg-slate-50 border-t border-slate-100 font-manrope text-xs font-bold uppercase tracking-widest text-primary hover:bg-primary hover:text-on-primary transition-all group-hover:bg-primary group-hover:text-on-primary">
+                        View Profile
+                    </button>
+</div>
+<!-- Skeleton for More -->
+<div class="border border-dashed border-slate-200 rounded-xl flex flex-col items-center justify-center p-8 bg-slate-50/50">
+<span class="material-symbols-outlined text-4xl text-slate-300 mb-4">more_horiz</span>
+<p class="text-slate-400 text-sm font-bold uppercase tracking-widest">Load More Members</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 right-0 h-16 bg-white border-t border-slate-200 flex justify-around items-center md:hidden z-50">
+<button class="flex flex-col items-center text-primary">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Insights</span>
+</button>
+<button class="flex flex-col items-center text-primary border-t-2 border-primary pt-1">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Network</span>
+</button>
+<button class="flex flex-col items-center text-slate-400">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Messages</span>
+</button>
+<button class="flex flex-col items-center text-slate-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Profile</span>
+</button>
+</nav>
+</body></html>
